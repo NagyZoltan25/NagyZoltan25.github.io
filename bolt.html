@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolt – táblázatok és tananyagok</title>
+  <meta name="description" content="Excel költségvetés-táblázatok és matek-, fizika-tananyagok – hamarosan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
+    <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="korrepetalas.html">Korrepetálás</a>
+      <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
+      <a href="kalkulatorok.html">Kalkulátorok</a>
+      <a href="tudastar.html">Tudástár</a>
+      <a href="bolt.html" aria-current="page">Bolt</a>
+      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="section dark">
+  <div class="wrap stack">
+    <span class="chip amber">Hamarosan</span>
+    <h1>Bolt</h1>
+    <p class="lead">Táblázatok és tananyagok, amiket én készítettem. A bolt hamarosan nyílik – iratkozz fel, és szólok, amikor elindul.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap stack-lg">
+    <div class="grid">
+      <div class="card"><span class="chip">Excel · Pénzügy</span><h3>Éves költségvetés-táblázat</h3><p class="muted">12 havi lap, bevételek forrásonként, tartozás-követő, éves összesítő.</p></div>
+      <div class="card"><span class="chip">Excel · Pénzügy</span><h3>Hitel- és tartozáskövető</h3><p class="muted">Minden hiteled egy helyen: egyenleg, törlesztés, kamat havonta.</p></div>
+      <div class="card"><span class="chip">Excel · Tanároknak</span><h3>Korrepetálási napló</h3><p class="muted">Diákonkénti óra- és bevételnapló, havi és éves kimutatással.</p></div>
+      <div class="card"><span class="chip">PDF · Matek / Fizika</span><h3>[Tananyag címe]</h3><p class="muted">[Rövid leírás]</p></div>
+    </div>
+    <div class="grid-2" style="align-items:start">
+      <div class="stack"><h2>Szólj, ha indul</h2><p class="muted">Jelöld be, mi érdekel, és elsőként értesítelek.</p></div>
+      <form class="card" data-mailto="Bolt – értesítést kérek">
+        <label>E-mail<input name="E-mail" type="email" required></label>
+        <label>Mi érdekel?<select name="Érdeklődés"><option>Éves költségvetés-táblázat</option><option>Hitelkövető</option><option>Korrepetálási napló</option><option>Matek / fizika tananyag</option><option>Online kurzus</option></select></label>
+        <label class="check"><input type="checkbox" name="Adatkezelés elfogadva" required>Elolvastam az <a href="adatkezeles.html">adatkezelési tájékoztatót</a>.</label>
+        <button class="btn" type="submit">Értesítést kérek</button>
+        <p class="notice small form-ok" hidden>Megnyílt az e-mail-programod – nyomj rá a Küldésre.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== LÁBLÉC ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
+      <div><h3>Oldalak</h3><ul>
+        <li><a href="korrepetalas.html">Korrepetálás</a></li>
+        <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
+        <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
+        <li><a href="tudastar.html">Tudástár</a></li>
+        <li><a href="ingyenes.html">Ingyenes sablon</a></li>
+      </ul></div>
+      <div><h3>Kapcsolat</h3><ul>
+        <li><a href="tel:+36301966102">06 30 196 6102</a></li>
+        <li><a href="mailto:nagy.zoltan2223@gmail.com">nagy.zoltan2223@gmail.com</a></li>
+        <li>Discord: nagyzoltan4180</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Nagy Zoltán</span>
+      <span><a href="adatkezeles.html">Adatkezelési tájékoztató</a> · <a href="impresszum.html">Impresszum</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

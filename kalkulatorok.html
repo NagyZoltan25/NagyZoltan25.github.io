@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pénzügyi kalkulátorok – megtakarítás, hitel, vésztartalék</title>
+  <meta name="description" content="Ingyenes megtakarítás-, hiteltörlesztő- és vésztartalék-kalkulátor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
+    <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="korrepetalas.html">Korrepetálás</a>
+      <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
+      <a href="kalkulatorok.html" aria-current="page">Kalkulátorok</a>
+      <a href="tudastar.html">Tudástár</a>
+      <a href="bolt.html">Bolt</a>
+      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="section dark">
+  <div class="wrap stack">
+    <h1>Pénzügyi kalkulátorok</h1>
+    <p class="lead">Számold ki percek alatt, mennyi lehet a megtakarításod, mennyi a hiteled törlesztője, és mekkora vésztartalék kell neked.</p>
+  </div>
+</section>
+<section class="section" id="kalkulatorok">
+  <div class="wrap stack-lg">
+    <div class="tabs" role="tablist" aria-label="Kalkulátor választása">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-meg">Megtakarítás</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-hitel">Hiteltörlesztő</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-tart">Vésztartalék</button>
+    </div>
+
+    <div class="calc" id="p-meg" role="tabpanel">
+      <div class="stack">
+        <label for="m-havi">Havi befizetés: <span id="m-havi-t"></span></label><input type="range" id="m-havi" min="5000" max="300000" step="5000" value="30000">
+        <label for="m-hozam">Várható éves hozam: <span id="m-hozam-t"></span></label><input type="range" id="m-hozam" min="0" max="12" step="0.5" value="6">
+        <label for="m-ev">Időtáv: <span id="m-ev-t"></span></label><input type="range" id="m-ev" min="1" max="40" step="1" value="10">
+      </div>
+      <div class="result">
+        <span>Várható egyenleg <span id="m-ev-r"></span> év múlva</span>
+        <span class="big" id="m-fv"></span>
+        <div class="bar" aria-hidden="true"><span id="m-bar"></span></div>
+        <div class="row"><span>Befizetett</span><strong id="m-be"></strong></div>
+        <div class="row"><span>Hozam</span><strong id="m-hoz"></strong></div>
+        <a class="btn" href="tanacsadas.html" style="margin-top:12px">Beszéljük át a terved</a>
+      </div>
+    </div>
+
+    <div class="calc" id="p-hitel" role="tabpanel" hidden>
+      <div class="stack">
+        <label for="h-osszeg">Hitelösszeg: <span id="h-osszeg-t"></span></label><input type="range" id="h-osszeg" min="500000" max="80000000" step="500000" value="10000000">
+        <label for="h-kamat">Éves kamat: <span id="h-kamat-t"></span></label><input type="range" id="h-kamat" min="0" max="20" step="0.1" value="6.5">
+        <label for="h-ev">Futamidő: <span id="h-ev-t"></span></label><input type="range" id="h-ev" min="1" max="35" step="1" value="20">
+      </div>
+      <div class="result">
+        <span>Havi törlesztőrészlet</span>
+        <span class="big" id="h-reszlet"></span>
+        <div class="row"><span>Visszafizetés összesen</span><strong id="h-ossz"></strong></div>
+        <div class="row"><span>Ebből kamat</span><strong id="h-kam"></strong></div>
+        <a class="btn" href="tanacsadas.html" style="margin-top:12px">Hitelt terveznék</a>
+      </div>
+    </div>
+
+    <div class="calc" id="p-tart" role="tabpanel" hidden>
+      <div class="stack">
+        <label for="t-kiadas">Havi kötelező kiadásaid: <span id="t-kiadas-t"></span></label><input type="range" id="t-kiadas" min="100000" max="1500000" step="10000" value="400000">
+        <label for="t-honap">Hány hónapot fedezzen: <span id="t-honap-t"></span></label><input type="range" id="t-honap" min="1" max="12" step="1" value="6">
+        <p class="muted small">Ökölszabály: alkalmazottként 3–6, változó jövedelemmel (vállalkozó, diákmunka, korrepetálás) 6–12 havi kiadás.</p>
+      </div>
+      <div class="result">
+        <span>Ajánlott vésztartalék</span>
+        <span class="big" id="t-cel"></span>
+        <span class="muted small">Havi 10% félretételével kb. <strong id="t-ido"></strong> hónap alatt éred el, ha a bevételed a kiadásaid 1,2-szerese.</span>
+        <a class="btn" href="ingyenes.html" style="margin-top:12px">Ingyenes költségvetés-sablon</a>
+      </div>
+    </div>
+
+    <p class="legal">A kalkulátorok tájékoztató jellegűek, nem minősülnek ajánlatnak vagy befektetési tanácsadásnak. A tényleges hozam és a hitel THM-je eltérhet.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== LÁBLÉC ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
+      <div><h3>Oldalak</h3><ul>
+        <li><a href="korrepetalas.html">Korrepetálás</a></li>
+        <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
+        <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
+        <li><a href="tudastar.html">Tudástár</a></li>
+        <li><a href="ingyenes.html">Ingyenes sablon</a></li>
+      </ul></div>
+      <div><h3>Kapcsolat</h3><ul>
+        <li><a href="tel:+36301966102">06 30 196 6102</a></li>
+        <li><a href="mailto:nagy.zoltan2223@gmail.com">nagy.zoltan2223@gmail.com</a></li>
+        <li>Discord: nagyzoltan4180</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Nagy Zoltán</span>
+      <span><a href="adatkezeles.html">Adatkezelési tájékoztató</a> · <a href="impresszum.html">Impresszum</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* ===== Színek – itt egy helyen átírhatod az egész oldal színeit ===== */
+:root{
+  --ink:#10213A; --muted:#4A5568; --bg:#FFFFFF; --alt:#F3F5F8;
+  --accent:#1E7A52; --accent-hover:#155C3D; --accent-soft:#E6F2EC; --accent-light:#8FD3B0;
+  --navy-card:#1A2E4C; --amber-bg:#FFF4E0; --amber-fg:#6B3E00;
+  --line:#E3E8EF; --line-strong:#C9D2DE; --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.6}
+h1,h2,h3{font-family:Manrope,Inter,sans-serif;line-height:1.15;margin:0;font-weight:800}
+h1{font-size:clamp(34px,5vw,54px)} h2{font-size:clamp(26px,3.2vw,36px)} h3{font-size:20px;font-weight:700}
+p{margin:0}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0} .section.alt{background:var(--alt)} .section.dark{background:var(--ink);color:#fff}
+.dark p,.dark .muted{color:#C9D2DE} .dark h1,.dark h2,.dark h3{color:#fff}
+.stack{display:flex;flex-direction:column;gap:16px} .stack-lg{display:flex;flex-direction:column;gap:32px}
+.muted{color:var(--muted)} .small{font-size:14px}
+.eyebrow{font-size:14px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+.dark .eyebrow{color:var(--accent-light)}
+.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);max-width:720px}
+.dark .lead{color:#C9D2DE}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid-2{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center}
+.card{padding:26px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.alt .card{border-color:transparent}
+.card.dark-card{background:var(--navy-card);border:0;color:#fff}
+.chip{align-self:flex-start;display:inline-block;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-hover);font-size:13px;font-weight:700}
+.chip.amber{background:var(--amber-bg);color:var(--amber-fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border:0;font-size:16px;font-family:inherit;cursor:pointer}
+.btn:hover{background:var(--accent-hover);color:#fff}
+.btn.ghost{background:transparent;border:1px solid var(--line-strong);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.dark .btn.ghost{color:#fff;border-color:#4A5E7D}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+.placeholder{background:var(--accent-soft);color:var(--accent-hover);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;min-height:220px}
+/* Fejléc */
+.site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-family:Manrope,sans-serif;font-weight:800;font-size:18px}
+.logo span:first-child{width:42px;height:42px;border-radius:12px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+.logo:hover{color:var(--ink)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:10px 12px;color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;border-radius:8px}
+.nav a:hover{background:var(--alt)}
+.nav a[aria-current=page]{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:6px}
+.nav .btn{color:#fff;margin-left:8px;min-height:44px}
+.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:10px;min-height:44px;padding:0 14px;font:inherit;font-weight:600;color:var(--ink)}
+@media (max-width:960px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav .btn{margin:8px 0 0}
+}
+/* Lábléc */
+.site-footer{background:var(--ink);color:#C9D2DE;padding:56px 0 32px;font-size:15px}
+.site-footer a{color:#fff;text-decoration:none} .site-footer a:hover{text-decoration:underline;color:#fff}
+.footer-grid{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.footer-grid h3{font-size:16px;color:#fff;margin-bottom:12px}
+.footer-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid #2A3E5C;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px}
+/* Statisztika */
+.stats{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:40px}
+.stat{padding:20px;border-radius:14px;background:var(--navy-card)}
+.stat strong{display:block;font-family:Manrope,sans-serif;font-size:30px;color:#fff}
+.stat span{font-size:14px;color:#C9D2DE}
+/* Árak */
+.price{font-family:Manrope,sans-serif;font-size:34px;font-weight:800}
+.price small{font-size:16px;font-weight:500;color:var(--muted)}
+/* Lépések */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps li{display:flex;flex-direction:column;gap:8px}
+.steps .num{width:40px;height:40px;border-radius:999px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+/* GYIK */
+details{padding:18px 22px;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.alt details{border-color:transparent}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:10px;color:var(--muted)}
+/* Táblázat */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+tr:last-child td{border-bottom:0}
+/* Űrlapok */
+form{display:flex;flex-direction:column;gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:inherit;font-size:16px;min-height:50px;padding:10px 14px;border-radius:10px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--accent-light);border-color:var(--accent)}
+label.check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400}
+label.check input{width:20px;min-height:20px;height:20px;flex-shrink:0;margin-top:2px}
+.form-row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.notice{padding:16px 20px;border-radius:12px;background:var(--accent-soft);color:var(--accent-hover)}
+.notice.amber{background:var(--amber-bg);color:var(--amber-fg)}
+.legal{font-size:14px;color:var(--muted);border-left:3px solid var(--line-strong);padding-left:16px}
+/* Kalkulátor */
+.tabs{display:flex;flex-wrap:wrap;gap:10px}
+.tab{min-height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.calc{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start}
+.calc[hidden]{display:none}
+input[type=range]{padding:0;min-height:32px;border:0;accent-color:var(--accent)}
+.result{padding:32px;border-radius:20px;background:var(--ink);color:#fff;display:flex;flex-direction:column;gap:10px}
+.result .big{font-family:Manrope,sans-serif;font-size:clamp(32px,4vw,44px);font-weight:800}
+.result .row{display:flex;justify-content:space-between;color:#C9D2DE;font-size:15px}
+.result .row strong{color:#fff}
+.bar{height:10px;border-radius:999px;background:var(--accent);overflow:hidden}
+.bar span{display:block;height:100%;background:#fff}
+/* Cikk */
+.article{max-width:760px}
+.article p,.article li{font-size:18px;line-height:1.75}
+.article h2{font-size:28px;margin-top:40px}
+.article blockquote{margin:28px 0;padding:20px 24px;border-left:4px solid var(--accent);background:var(--alt);border-radius:0 12px 12px 0;font-size:18px}
+.post-card{text-decoration:none;color:var(--ink);border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.post-card .thumb{height:150px;background:var(--accent-soft)}
+.post-card .body{padding:22px;display:flex;flex-direction:column;gap:8px}
+.post-card:hover{border-color:var(--accent);color:var(--ink)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent-light);outline-offset:2px}
