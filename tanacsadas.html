@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
 <body>
 <!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <a class="logo" href="index.html"><img src="assets/logo-mark.svg" width="42" height="42" alt=""><span class="logo-text">Nagy Zoltán<small>Tanulj okosan · Bánj okosan a pénzeddel</small></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
     <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="rolam.html">Rólam</a>
       <a href="korrepetalas.html">Korrepetálás</a>
       <a href="tanacsadas.html" aria-current="page">Pénzügyi tanácsadás</a>
       <a href="kalkulatorok.html">Kalkulátorok</a>
       <a href="tudastar.html">Tudástár</a>
       <a href="bolt.html">Bolt</a>
-      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+      <a class="btn" href="index.html#foglalas">Időpontfoglalás</a>
     </nav>
   </div>
 </header>
@@ -33,8 +34,8 @@
 <section class="section dark">
   <div class="wrap stack">
     <h1>Tudd, hová megy a pénzed – és hová szeretnéd, hogy menjen.</h1>
-    <p class="lead">Közösen rendbe tesszük a költségvetésedet, a megtakarításaidat, a hiteleidet és a biztosításaidat. Érthetően, termékkényszer nélkül.</p>
-    <div class="btn-row"><a class="btn" href="index.html#kapcsolat">Időpontot kérek</a><a class="btn ghost" href="kalkulatorok.html">Kalkulátorok kipróbálása</a></div>
+    <p class="lead">Közösen rendbe tesszük a költségvetésedet, a megtakarításaidat, a hiteleidet és a biztosításaidat. Érthetően, termékkényszer nélkül – a tanácsadás és a teljes együttműködés díjmentes.</p>
+    <div class="btn-row"><a class="btn" href="#foglalas">Díjmentes időpontot kérek</a><a class="btn ghost" href="kalkulatorok.html">Kalkulátorok kipróbálása</a></div>
   </div>
 </section>
 
@@ -49,6 +50,8 @@
       <div class="card"><h3>Biztosítások átnézése</h3><p class="muted">Mire van valóban szükséged, és mit fizetsz feleslegesen.</p></div>
       <div class="card"><h3>Első lakás</h3><p class="muted">Önerő, támogatások, hitelképesség: a teljes út a kulcsátadásig.</p></div>
     </div>
+    <div class="stack"><h3>További témák</h3>
+      <p class="muted">Gyermek jövőjére szóló megtakarítás · nyugdíjcélú megtakarítás · élet-, baleset- és egészségbiztosítás · bankszámlanyitás és -váltás · egészségpénztár · lakásbiztosítás · autóvásárlás, KGFB, CASCO · személyi kölcsön, babaváró, CSOK Plusz</p></div>
   </div>
 </section>
 
@@ -56,7 +59,7 @@
   <div class="wrap stack-lg">
     <h2>Hogyan dolgozunk együtt</h2>
     <ol class="steps">
-      <li><span class="num">1</span><strong>Ismerkedő beszélgetés</strong><span class="muted">30 perc online: mi a célod, hol tartasz most.</span></li>
+      <li><span class="num">1</span><strong>Ismerkedő beszélgetés</strong><span class="muted">Online vagy személyesen: mi a célod, hol tartasz most.</span></li>
       <li><span class="num">2</span><strong>Helyzetfelmérés</strong><span class="muted">Bevételek, kiadások, hitelek, szerződések egy táblázatban.</span></li>
       <li><span class="num">3</span><strong>Személyre szabott terv</strong><span class="muted">Konkrét lépések, sorrend és határidők.</span></li>
       <li><span class="num">4</span><strong>Követés</strong><span class="muted">Negyedévente ránézünk, mi valósult meg.</span></li>
@@ -64,18 +67,35 @@
   </div>
 </section>
 
+<section class="section" id="foglalas">
+  <div class="wrap stack-lg">
+    <div class="stack"><h2>Foglalj díjmentes időpontot</h2>
+      <p class="lead">A beszélgetés történhet személyesen vagy online, az egész ország területéről. A foglalásnál jelöld be, mely témák érdekelnek.</p></div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/nagy-zoltan2223/penzugyi-tanacsadas?hide_gdpr_banner=1&primary_color=1e7a52" style="min-width:320px;height:760px"></div>
+    <p class="small muted">Nem töltődik be a naptár? <a href="https://calendly.com/nagy-zoltan2223/penzugyi-tanacsadas" target="_blank" rel="noopener">Nyisd meg a foglalási oldalt új lapon →</a></p>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap grid-2">
+    <div class="stack"><span class="eyebrow">PénzIndeX</span><h2>Küldetésünk</h2></div>
+    <div class="stack"><p class="lead">A PénzIndeX küldetése, hogy tevőlegesen és tudatosan hozzájáruljon a magyar pénzügyi kultúra fejlődéséhez, és hogy a magyar lakosság minél nagyobb része meg tudja teremteni a saját anyagi biztonságának alapjait. Ügyfeleinket abban segítjük, hogy minél több pénzügyi céljukat elérjék, és nagyobb anyagi biztonságban éljenek.</p>
+      <p class="small">[PénzIndeX vízió – ha megvan a hivatalos szövege, ide kerül]</p></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap grid-2">
-    <div class="stack"><span class="chip">Ingyenes</span><h2>Költségvetés-sablon</h2><p class="lead">Töltsd le az egyszerűsített változatát annak a táblázatnak, amit én is használok.</p></div>
-    <div><a class="btn" href="ingyenes.html">Letöltöm</a></div>
+    <div class="stack"><span class="chip">Ingyenes Excel</span><h2>Költségvetés-sablon</h2><p class="lead">Töltsd le az egyszerűsített változatát annak a táblázatnak, amit én is használok.</p></div>
+    <div><a class="btn" href="letoltes/havi-koltsegvetes-sablon.xlsx" download>Letöltöm (Excel)</a></div>
   </div>
 </section>
 
 <section class="section alt">
   <div class="wrap stack">
     <h2>Gyakori kérdések</h2>
-    <details><summary>Mennyibe kerül a tanácsadás?</summary><p>[Díjazás a PénzIndeX szabályai szerint]</p></details>
-    <details><summary>Online vagy személyesen?</summary><p>Mindkettő lehetséges, személyesen Budapesten.</p></details>
+    <details><summary>Mennyibe kerül a tanácsadás?</summary><p>Semmibe. A tanácsadás és a teljes együttműködés díjmentes számodra. A legjobban úgy hálálhatod meg, ha továbbajánlasz olyanoknak, akiknek szintén hasznos lehet.</p></details>
+    <details><summary>Online vagy személyesen?</summary><p>Mindkettő lehetséges. Online az egész ország területéről, személyesen Budapesten.</p></details>
     <details><summary>Kötelező szerződést kötnöm?</summary><p>Nem. A beszélgetés után te döntöd el, mit valósítasz meg és hogyan.</p></details>
     <details><summary>Mire készüljek az első alkalomra?</summary><p>Elég, ha nagyjából tudod a havi bevételedet és a fix kiadásaidat. A többit közösen rakjuk össze.</p></details>
     <p class="legal" style="margin-top:16px">[IDE KERÜL: a PénzIndeX Kft. által jóváhagyott megnevezés, közvetítői státusz, MNB-nyilvántartási szám, panaszkezelés]</p>
@@ -90,6 +110,7 @@
     <div class="footer-grid">
       <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
       <div><h3>Oldalak</h3><ul>
+        <li><a href="rolam.html">Rólam</a></li>
         <li><a href="korrepetalas.html">Korrepetálás</a></li>
         <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
         <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
@@ -109,5 +130,6 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

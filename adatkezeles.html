@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
 <body>
 <!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <a class="logo" href="index.html"><img src="assets/logo-mark.svg" width="42" height="42" alt=""><span class="logo-text">Nagy Zoltán<small>Tanulj okosan · Bánj okosan a pénzeddel</small></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
     <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="rolam.html">Rólam</a>
       <a href="korrepetalas.html">Korrepetálás</a>
       <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
       <a href="kalkulatorok.html">Kalkulátorok</a>
       <a href="tudastar.html">Tudástár</a>
       <a href="bolt.html">Bolt</a>
-      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+      <a class="btn" href="index.html#foglalas">Időpontfoglalás</a>
     </nav>
   </div>
 </header>
@@ -36,9 +37,9 @@
   <h2>Adatkezelő</h2><p>Nagy Zoltán egyéni vállalkozó · Székhely: [CÍM] · Adószám: [ADÓSZÁM] · E-mail: nagy.zoltan2223@gmail.com</p>
   <h2>Milyen adatokat kezelek?</h2><p>Az űrlapokon megadott nevet, e-mail-címet, telefonszámot és üzenetet – kizárólag a megkeresésed megválaszolására, órák és konzultációk egyeztetésére, illetve hozzájárulás esetén hírlevél küldésére.</p>
   <h2>Jogalap és időtartam</h2><p>[Hozzájárulás / szerződés előkészítése; meddig őrzöd az adatokat]</p>
-  <h2>Adatfeldolgozók</h2><p>Tárhely: GitHub Inc. (GitHub Pages). E-mail: Google LLC (Gmail). [Hírlevélküldő, ha lesz, pl. MailerLite]</p>
+  <h2>Adatfeldolgozók</h2><p>Tárhely: GitHub Inc. (GitHub Pages). Időpontfoglalás: Calendly LLC. E-mail: Google LLC (Gmail). [Hírlevélküldő, ha lesz, pl. MailerLite]</p>
   <h2>Jogaid</h2><p>Kérheted az adataidhoz való hozzáférést, helyesbítést, törlést; panasszal a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH) fordulhatsz.</p>
-  <h2>Sütik</h2><p>Az oldal nem használ követő sütiket. A betűtípusokat a Google Fonts szolgáltatja.</p>
+  <h2>Sütik</h2><p>Az oldal saját maga nem használ követő sütiket. A beágyazott Calendly-naptár a Calendly saját sütijeit használhatja; a betűtípusokat a Google Fonts szolgáltatja.</p>
 </div></section>
 
 </main>
@@ -49,6 +50,7 @@
     <div class="footer-grid">
       <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
       <div><h3>Oldalak</h3><ul>
+        <li><a href="rolam.html">Rólam</a></li>
         <li><a href="korrepetalas.html">Korrepetálás</a></li>
         <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
         <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
@@ -68,5 +70,6 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

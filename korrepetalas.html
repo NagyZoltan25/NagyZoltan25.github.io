@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
 <body>
 <!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <a class="logo" href="index.html"><img src="assets/logo-mark.svg" width="42" height="42" alt=""><span class="logo-text">Nagy Zoltán<small>Tanulj okosan · Bánj okosan a pénzeddel</small></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
     <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="rolam.html">Rólam</a>
       <a href="korrepetalas.html" aria-current="page">Korrepetálás</a>
       <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
       <a href="kalkulatorok.html">Kalkulátorok</a>
       <a href="tudastar.html">Tudástár</a>
       <a href="bolt.html">Bolt</a>
-      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+      <a class="btn" href="index.html#foglalas">Időpontfoglalás</a>
     </nav>
   </div>
 </header>
@@ -34,7 +35,7 @@
   <div class="wrap stack">
     <h1>Matek- és fizikakorrepetálás online, egyénileg vagy kis csoportban</h1>
     <p class="lead">9. osztálytól egyetem 2. évig. Dolgozatra, témazáróra, érettségire, ZH-ra vagy vizsgára: minden óra előtt közösen kitűzzük a célt.</p>
-    <div class="btn-row"><a class="btn" href="index.html#kapcsolat">Egyéni órát foglalok</a><a class="btn ghost" href="#csoportok">Csoportos időpontok</a></div>
+    <div class="btn-row"><a class="btn" href="#foglalas">Egyéni órát foglalok</a><a class="btn ghost" href="#csoportok">Csoportos órák</a></div>
   </div>
 </section>
 
@@ -53,7 +54,7 @@
   <div class="wrap stack-lg">
     <h2>Így zajlik egy óra</h2>
     <ol class="steps">
-      <li><span class="num">1</span><strong>Időpontot kérsz</strong><span class="muted">Az űrlapon vagy telefonon.</span></li>
+      <li><span class="num">1</span><strong>Időpontot foglalsz</strong><span class="muted">A lenti naptárban, pár kattintással.</span></li>
       <li><span class="num">2</span><strong>Egyeztetjük a célt</strong><span class="muted">Megírod, mire készülsz, és mi nem megy.</span></li>
       <li><span class="num">3</span><strong>60 perc online</strong><span class="muted">Discordon vagy Google Meeten, közös táblával.</span></li>
       <li><span class="num">4</span><strong>Gyakorlás, kérdések</strong><span class="muted">Két óra között a sürgős kérdésekre ingyen válaszolok.</span></li>
@@ -66,7 +67,7 @@
     <h2>Árak</h2>
     <div class="grid">
       <div class="card"><span class="muted">Egyéni óra</span><span class="price">8 000 Ft</span><p class="muted">60 perc · fizetés az óra után</p></div>
-      <div class="card"><span class="muted">Csoportos óra, 2–4 fő</span><span class="price">[ÁR] Ft <small>/ fő</small></span><p class="muted">60 perc · havonta előre fizetve</p></div>
+      <div class="card"><span class="muted">Páros óra (2 fő)</span><span class="price">5 000 Ft <small>/ fő</small></span><p class="muted">60 perc · barátokkal, osztálytársakkal együtt</p></div>
     </div>
   </div>
 </section>
@@ -99,7 +100,15 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="foglalas">
+  <div class="wrap stack-lg">
+    <div class="stack"><h2>Foglalj órát</h2><p class="lead">Válaszd ki a neked jó időpontot. A foglalás után felveszem veled a kapcsolatot; a módosítást telefonon vagy üzenetben egyeztetjük.</p></div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/nagy-zoltan2223/1hour?hide_gdpr_banner=1&primary_color=1e7a52" style="min-width:320px;height:760px"></div>
+    <p class="small muted">Nem töltődik be a naptár? <a href="https://calendly.com/nagy-zoltan2223/1hour" target="_blank" rel="noopener">Nyisd meg a foglalási oldalt új lapon →</a></p>
+  </div>
+</section>
+
+<section class="section alt">
   <div class="wrap stack">
     <h2>Gyakori kérdések</h2>
     <details><summary>Mi kell az órához?</summary><p>Gép vagy tablet kamerával, Discord vagy Google Meet. Ha nincs Discordod, e-mailben küldöm a linket.</p></details>
@@ -117,6 +126,7 @@
     <div class="footer-grid">
       <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
       <div><h3>Oldalak</h3><ul>
+        <li><a href="rolam.html">Rólam</a></li>
         <li><a href="korrepetalas.html">Korrepetálás</a></li>
         <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
         <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
@@ -136,5 +146,6 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

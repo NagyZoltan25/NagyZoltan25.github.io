@@ -8,6 +8,12 @@ Egyszerű, ingyenesen futtatható statikus oldal (GitHub Pages).
 - **Űrlapok címzettje:** `assets/main.js` – legfelül a `CONFIG.email`.
 - **Fejléc / lábléc:** minden oldalon külön szerepel – ha módosítod, mindegyikben írd át.
 
+## Időpontfoglalás (Calendly)
+A naptárak a `korrepetalas.html` és a `tanacsadas.html` „foglalas” részében vannak (`calendly-inline-widget`). Más esemény linkjéhez a `data-url` értékét írd át.
+
+## Letölthető fájlok
+A `letoltes` mappába tett fájlokra így linkelhetsz: `<a href="letoltes/fajlnev.xlsx" download>`.
+
 ## Új cikk
 1. Másold le a `koltsegvetes-kezdoknek.html` fájlt új néven.
 2. Írd át a címet és a szöveget.
@@ -16,4 +22,5 @@ Egyszerű, ingyenesen futtatható statikus oldal (GitHub Pages).
 ## Élesítés előtt
 - PénzIndeX által jóváhagyott jogi szöveg (`[IDE KERÜL: …]` részek)
 - Adatkezelési tájékoztató és impresszum kitöltése (cím, adószám)
-- Portréfotó, csoportos árak és időpontok
+- Portréfotó (`assets/zoli.jpg`), csoportos időpontok
+- PénzIndeX vízió szövege

@@ -40,15 +40,15 @@ img{max-width:100%;display:block}
 .site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-family:Manrope,sans-serif;font-weight:800;font-size:18px}
-.logo span:first-child{width:42px;height:42px;border-radius:12px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+
 .logo:hover{color:var(--ink)}
 .nav{display:flex;align-items:center;gap:4px}
-.nav a{padding:10px 12px;color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;border-radius:8px}
+.nav a{white-space:nowrap;padding:10px 10px;color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;border-radius:8px}
 .nav a:hover{background:var(--alt)}
 .nav a[aria-current=page]{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:6px}
 .nav .btn{color:#fff;margin-left:8px;min-height:44px}
 .menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:10px;min-height:44px;padding:0 14px;font:inherit;font-weight:600;color:var(--ink)}
-@media (max-width:960px){
+@media (max-width:1140px){
   .menu-btn{display:block}
   .nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--line)}
   .nav.open{display:flex}
@@ -120,3 +120,9 @@ input[type=range]{padding:0;min-height:32px;border:0;accent-color:var(--accent)}
 .post-card:hover{border-color:var(--accent);color:var(--ink)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:3px solid var(--accent-light);outline-offset:2px}
+/* Logó */
+.logo img{width:42px;height:42px;border-radius:12px}
+.logo-text{display:flex;flex-direction:column;line-height:1.15}
+.logo-text small{font-family:Inter,sans-serif;font-weight:500;font-size:12px;color:var(--muted)}
+@media (max-width:420px){.logo-text small{display:none}}
+.calendly-inline-widget{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff}

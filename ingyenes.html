@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
 <body>
 <!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <a class="logo" href="index.html"><img src="assets/logo-mark.svg" width="42" height="42" alt=""><span class="logo-text">Nagy Zoltán<small>Tanulj okosan · Bánj okosan a pénzeddel</small></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
     <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="rolam.html">Rólam</a>
       <a href="korrepetalas.html">Korrepetálás</a>
       <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
       <a href="kalkulatorok.html">Kalkulátorok</a>
       <a href="tudastar.html">Tudástár</a>
       <a href="bolt.html">Bolt</a>
-      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+      <a class="btn" href="index.html#foglalas">Időpontfoglalás</a>
     </nav>
   </div>
 </header>
@@ -35,16 +36,19 @@
     <div class="stack">
       <span class="chip">Ingyenes letöltés</span>
       <h1>Havi költségvetés-sablon, ami 10 perc alatt beállítható</h1>
-      <p class="lead">Add meg az e-mail-címed, és elküldöm a sablont egy rövid útmutatóval arról, hogyan töltsd ki az első hónapot.</p>
+      <p class="lead">Excel-táblázat bevételekre, fix és változó kiadásokra, megtakarításra – kitöltési útmutatóval. Ingyenes, regisztráció nélkül.</p>
+      <div class="btn-row"><a class="btn" href="letoltes/havi-koltsegvetes-sablon.xlsx" download>Letöltöm (Excel, .xlsx)</a></div>
+      <p class="small">Működik Excelben, Google Táblázatokban és LibreOffice-ban.</p>
     </div>
-    <!-- KÉSŐBB: ezt az űrlapot cseréld a MailerLite beágyazott űrlapjára, akkor automatikusan megy ki a sablon. -->
-    <form class="card" style="color:var(--ink)" data-mailto="Kérem az ingyenes költségvetés-sablont">
-      <h2 style="font-size:24px;color:var(--ink)">Kérem a sablont</h2>
+    <!-- KÉSŐBB: ezt az űrlapot cseréld a MailerLite beágyazott űrlapjára. -->
+    <form class="card" style="color:var(--ink)" data-mailto="Feliratkozás: pénzügyi tippek">
+      <h2 style="font-size:24px;color:var(--ink)">Kérsz havi pénzügyi tippeket is?</h2>
+      <p class="muted">Iratkozz fel, és szólok, amikor új sablon, cikk vagy kalkulátor kerül fel.</p>
       <label>Keresztnév<input name="Keresztnév" required></label>
       <label>E-mail-cím<input name="E-mail" type="email" required></label>
       <label class="check"><input type="checkbox" name="Hírlevél hozzájárulás" required>Hozzájárulok, hogy e-mailt küldj; bármikor leiratkozhatok. <a href="adatkezeles.html">Adatkezelés</a></label>
-      <button class="btn" type="submit">Küldd el</button>
-      <p class="notice small form-ok" hidden>Megnyílt az e-mail-programod – nyomj rá a Küldésre, és hamarosan megkapod a sablont.</p>
+      <button class="btn" type="submit">Feliratkozom</button>
+      <p class="notice small form-ok" hidden>Megnyílt az e-mail-programod – nyomj rá a Küldésre.</p>
     </form>
   </div>
 </section>
@@ -52,9 +56,9 @@
   <div class="wrap stack-lg">
     <h2>Mi van benne</h2>
     <div class="grid">
-      <div class="card"><h3>Egy havi lap</h3><p class="muted">Bevételek és kiadások kategóriánként, a végén a havi egyenleggel.</p></div>
-      <div class="card"><h3>Kitöltési útmutató</h3><p class="muted">Mit hová írj, és hogyan nézd át a hónap végén, mire ment el a pénz.</p></div>
-      <div class="card"><h3>Kalkulátorok</h3><p class="muted">Vésztartalék és megtakarítás számolása <a href="kalkulatorok.html">itt az oldalon</a>.</p></div>
+      <div class="card"><h3>Költségvetés lap</h3><p class="muted">Bevételek, fix és változó kiadások, megtakarítás – terv, tényleges és eltérés oszloppal, a végén a havi egyenleggel és a megtakarítási rátával.</p></div>
+      <div class="card"><h3>Költésnapló</h3><p class="muted">Dátum, leírás, kategória legördülő listából, összeg. A változó kiadásokat a táblázat automatikusan összesíti kategóriánként.</p></div>
+      <div class="card"><h3>Útmutató</h3><p class="muted">Mit hová írj, és hogyan nézd át a hónap végén, mire ment el a pénz. Vésztartalékot <a href="kalkulatorok.html">itt számolhatsz</a>.</p></div>
     </div>
   </div>
 </section>
@@ -67,6 +71,7 @@
     <div class="footer-grid">
       <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
       <div><h3>Oldalak</h3><ul>
+        <li><a href="rolam.html">Rólam</a></li>
         <li><a href="korrepetalas.html">Korrepetálás</a></li>
         <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
         <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
@@ -86,5 +91,6 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

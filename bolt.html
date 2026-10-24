@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E7A52'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ENZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
 <body>
 <!-- ===== FEJLÉC (minden oldalon ugyanez; ha módosítod, mindegyikben írd át) ===== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span>NZ</span><span>Nagy Zoltán</span></a>
+    <a class="logo" href="index.html"><img src="assets/logo-mark.svg" width="42" height="42" alt=""><span class="logo-text">Nagy Zoltán<small>Tanulj okosan · Bánj okosan a pénzeddel</small></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="fomenu">Menü</button>
     <nav class="nav" id="fomenu" aria-label="Fő menü">
+      <a href="rolam.html">Rólam</a>
       <a href="korrepetalas.html">Korrepetálás</a>
       <a href="tanacsadas.html">Pénzügyi tanácsadás</a>
       <a href="kalkulatorok.html">Kalkulátorok</a>
       <a href="tudastar.html">Tudástár</a>
       <a href="bolt.html" aria-current="page">Bolt</a>
-      <a class="btn" href="index.html#kapcsolat">Időpontot kérek</a>
+      <a class="btn" href="index.html#foglalas">Időpontfoglalás</a>
     </nav>
   </div>
 </header>
@@ -37,10 +38,16 @@
     <p class="lead">Táblázatok és tananyagok, amiket én készítettem. A bolt hamarosan nyílik – iratkozz fel, és szólok, amikor elindul.</p>
   </div>
 </section>
+<section class="section alt">
+  <div class="wrap grid-2">
+    <div class="stack"><span class="chip">Már most ingyen</span><h2>Havi költségvetés-sablon</h2><p class="muted">Költségvetés lap, költésnapló és útmutató egy Excel-fájlban.</p></div>
+    <div class="btn-row"><a class="btn" href="letoltes/havi-koltsegvetes-sablon.xlsx" download>Letöltöm</a><a class="btn ghost" href="ingyenes.html">Részletek</a></div>
+  </div>
+</section>
 <section class="section">
   <div class="wrap stack-lg">
     <div class="grid">
-      <div class="card"><span class="chip">Excel · Pénzügy</span><h3>Éves költségvetés-táblázat</h3><p class="muted">12 havi lap, bevételek forrásonként, tartozás-követő, éves összesítő.</p></div>
+      <div class="card"><span class="chip amber">Hamarosan</span><h3>Éves költségvetés-táblázat</h3><p class="muted">Az a táblázat, amit én is használok: 12 havi lap, bevételek forrásonként, tartozás-követő, munka- és diáknapló, éves összesítő.</p></div>
       <div class="card"><span class="chip">Excel · Pénzügy</span><h3>Hitel- és tartozáskövető</h3><p class="muted">Minden hiteled egy helyen: egyenleg, törlesztés, kamat havonta.</p></div>
       <div class="card"><span class="chip">Excel · Tanároknak</span><h3>Korrepetálási napló</h3><p class="muted">Diákonkénti óra- és bevételnapló, havi és éves kimutatással.</p></div>
       <div class="card"><span class="chip">PDF · Matek / Fizika</span><h3>[Tananyag címe]</h3><p class="muted">[Rövid leírás]</p></div>
@@ -66,6 +73,7 @@
     <div class="footer-grid">
       <div><h3>Nagy Zoltán</h3><p>Matek- és fizikakorrepetálás, pénzügyi tanácsadás.</p></div>
       <div><h3>Oldalak</h3><ul>
+        <li><a href="rolam.html">Rólam</a></li>
         <li><a href="korrepetalas.html">Korrepetálás</a></li>
         <li><a href="tanacsadas.html">Pénzügyi tanácsadás</a></li>
         <li><a href="kalkulatorok.html">Kalkulátorok</a></li>
@@ -85,5 +93,6 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
