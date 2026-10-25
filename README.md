@@ -20,7 +20,6 @@ A `letoltes` mappába tett fájlokra így linkelhetsz: `<a href="letoltes/fajlne
 3. A `tudastar.html`-ben másold le a cikk-kártyát, és linkeld az új fájlra.
 
 ## Élesítés előtt
-- PénzIndeX által jóváhagyott jogi szöveg (`[IDE KERÜL: …]` részek)
+- Ha pénzügyi termék közvetítéséhez kapcsolódik: kötelező közvetítői tájékoztató (a HTML-ben megjegyzés jelzi a helyét)
 - Adatkezelési tájékoztató és impresszum kitöltése (cím, adószám)
 - Portréfotó (`assets/zoli.jpg`), csoportos időpontok
-- PénzIndeX vízió szövege
