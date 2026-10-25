@@ -35,7 +35,7 @@
   <div class="wrap stack">
     <h1>Matek- és fizikakorrepetálás online, egyénileg vagy kis csoportban</h1>
     <p class="lead">9. osztálytól egyetem 2. évig. Dolgozatra, témazáróra, érettségire, ZH-ra vagy vizsgára: minden óra előtt közösen kitűzzük a célt.</p>
-    <div class="btn-row"><a class="btn" href="#foglalas">Egyéni órát foglalok</a><a class="btn ghost" href="#csoportok">Csoportos órák</a></div>
+    <div class="btn-row"><a class="btn" href="#foglalas">Órát foglalok</a><a class="btn ghost" href="#csoportok">Barátokkal együtt</a></div>
   </div>
 </section>
 
@@ -88,27 +88,34 @@
 
 <section class="section alt" id="csoportok">
   <div class="wrap stack-lg">
-    <div class="stack"><h2>Induló csoportok</h2><p class="lead">Kis létszámú online csoportok heti rendszerességgel, legfeljebb 4 fővel.</p></div>
-    <div class="table-wrap"><table>
-      <thead><tr><th>Csoport</th><th>Időpont</th><th>Kezdés</th><th>Szabad hely</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Emelt matek érettségi</strong></td><td>[NAP, ÓRA]</td><td>[DÁTUM]</td><td>[x] / 4</td></tr>
-        <tr><td><strong>Fizika érettségi</strong></td><td>[NAP, ÓRA]</td><td>[DÁTUM]</td><td>[x] / 4</td></tr>
-        <tr><td><strong>Egyetemkezdő matek (nyári)</strong></td><td>[IDŐSZAK]</td><td>[DÁTUM]</td><td>[x] / 4</td></tr>
-      </tbody>
-    </table></div>
+    <div class="stack"><span class="eyebrow">Páros és csoportos óra</span><h2>Tanulj a barátaiddal – kedvezőbb áron</h2>
+      <p class="lead">Ha a barátaiddal vagy osztálytársaiddal együtt készülnétek, járjatok közösen órára. Ugyanaz a figyelem és ugyanaz a tudás, csak fejenként kevesebbe kerül. 9. osztálytól minden korosztálynak – középiskolásoknak és egyetemistáknak is.</p></div>
+    <div class="grid">
+      <div class="card"><span class="muted">Páros óra (2 fő)</span><span class="price">5 000 Ft <small>/ fő / 60 perc</small></span></div>
+      <div class="card"><span class="muted">Csoportos óra (3 főtől)</span><span class="price">4 000 Ft <small>/ fő / 60 perc</small></span></div>
+    </div>
+    <ol class="steps">
+      <li><span class="num">1</span><strong>Beszéljétek meg</strong><span class="muted">Kik jönnétek, és miben szeretnétek fejlődni (pl. témazáró, érettségi, ZH).</span></li>
+      <li><span class="num">2</span><strong>Egyikőtök jelentkezik</strong><span class="muted">Az űrlapon, vagy foglal egy időpontot a <a href="#foglalas">naptárban</a>, és a megjegyzésbe beírja a társai nevét.</span></li>
+      <li><span class="num">3</span><strong>Felhívlak</strong><span class="muted">Egyeztetjük a részleteket és a mindenkinek megfelelő heti időpontot.</span></li>
+    </ol>
     <div class="grid-2" style="align-items:start">
-      <div class="stack"><h3>Jelentkezés csoportba</h3><p class="muted">Töltsd ki, és 24 órán belül visszaírok a részletekkel. Ha betelt a csoport, várólistára kerülsz, és szólok, ha felszabadul hely.</p></div>
-      <form class="card" data-mailto="Csoportos jelentkezés">
-        <div class="form-row"><label>Név<input name="Név" required></label><label>E-mail<input name="E-mail" type="email" required></label></div>
+      <div class="stack"><h3>Jelentkezés páros vagy csoportos órára</h3>
+        <p class="muted">Elég, ha egyikőtök kitölti. 24 órán belül felhívlak vagy visszaírok.</p></div>
+      <form class="card" data-mailto="Páros/csoportos óra jelentkezés">
+        <div class="form-row"><label>Neved<input name="Név" required autocomplete="name"></label><label>Telefonszám<input name="Telefon" type="tel" required autocomplete="tel"></label></div>
+        <label>E-mail<input name="E-mail" type="email" required autocomplete="email"></label>
         <div class="form-row">
-          <label>Évfolyam<select name="Évfolyam"><option>11. osztály</option><option>12. osztály</option><option>Egyetem</option><option>Egyéb</option></select></label>
-          <label>Csoport<select name="Csoport"><option>Emelt matek érettségi</option><option>Fizika érettségi</option><option>Egyetemkezdő matek</option></select></label>
+          <label>Hányan lennétek?<select name="Létszám"><option>2 fő</option><option>3 fő</option><option>4 fő</option><option>5 vagy több</option></select></label>
+          <label>Tárgy<select name="Tárgy"><option>Matematika</option><option>Fizika</option><option>Matek és fizika</option><option>Egyetemi tárgy</option></select></label>
         </div>
-        <label>Miben szeretnél fejlődni?<textarea name="Cél"></textarea></label>
+        <label>Évfolyam<select name="Évfolyam"><option>9. osztály</option><option>10. osztály</option><option>11. osztály</option><option>12. osztály</option><option>Egyetem</option></select></label>
+        <label>Iskola vagy egyetem (nem kötelező)<input name="Iskola" placeholder="pl. BME, Corvinus, …"></label>
+        <label>Társaid neve<input name="Társak" placeholder="pl. Kiss Anna, Tóth Bence"></label>
+        <label>Mire készültök, mikor érnétek rá?<textarea name="Cél és időpont"></textarea></label>
         <label class="check"><input type="checkbox" name="Adatkezelés elfogadva" required>Elolvastam az <a href="adatkezeles.html">adatkezelési tájékoztatót</a>.</label>
         <button class="btn" type="submit">Jelentkezés elküldése</button>
-        <p class="notice small form-ok" hidden>Megnyílt az e-mail-programod – nyomj rá a Küldésre.</p>
+        <p class="notice small form-ok" hidden>Megnyílt az e-mail-programod a kitöltött üzenettel – nyomj rá a Küldésre.</p>
       </form>
     </div>
   </div>
@@ -128,6 +135,7 @@
     <details><summary>Mi kell az órához?</summary><p>Gép vagy tablet kamerával, Discord vagy Google Meet. Ha nincs Discordod, e-mailben küldöm a linket.</p></details>
     <details><summary>Hogyan fizetek?</summary><p>A hónap végén, egy összegben, utalással – az adott hónapban megtartott órák alapján.</p></details>
     <details><summary>Mi a lemondási szabály?</summary><p>2 nappal előtte díjmentes, 1 nappal előtte a díj fele, aznap vagy meg nem jelenéskor a teljes díj, kivéve alapos ok esetén.</p></details>
+    <details><summary>Hogyan működik a páros vagy csoportos óra?</summary><p>Ha a barátaiddal együtt jönnétek, egyikőtök jelentkezik a fenti űrlapon vagy foglal egy időpontot, és felhívom, hogy egyeztessük a részleteket. Páros órán 5 000 Ft, 3 főtől 4 000 Ft a díj fejenként.</p></details>
     <details><summary>Van próbaóra?</summary><p>[Döntsd el: pl. az első 15 perc ingyenes ismerkedés]</p></details>
   </div>
 </section>
