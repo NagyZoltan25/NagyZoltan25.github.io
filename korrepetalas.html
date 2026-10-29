@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Matek- és fizikakorrepetálás online – Nagy Zoltán</title>
   <meta name="description" content="Online matek- és fizikakorrepetálás 9. osztálytól egyetem 2. évig, egyénileg vagy kis csoportban.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
@@ -124,8 +121,13 @@
 <section class="section" id="foglalas">
   <div class="wrap stack-lg">
     <div class="stack"><h2>Foglalj órát</h2><p class="lead">Válaszd ki a neked jó időpontot. A foglalás után felveszem veled a kapcsolatot; a módosítást telefonon vagy üzenetben egyeztetjük.</p></div>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/nagy-zoltan2223/1hour?hide_gdpr_banner=1&primary_color=1e7a52" style="min-width:320px;height:760px"></div>
-    <p class="small muted">Nem töltődik be a naptár? <a href="https://calendly.com/nagy-zoltan2223/1hour" target="_blank" rel="noopener">Nyisd meg a foglalási oldalt új lapon →</a></p>
+    <div class="cal-box" data-cal-url="https://calendly.com/nagy-zoltan2223/1hour?hide_gdpr_banner=1&primary_color=1e7a52">
+      <div class="cal-consent card">
+        <h3>Időpontfoglaló naptár</h3>
+        <p class="muted">A naptárat a Calendly szolgáltatja. Betöltéskor a Calendly sütiket helyez el, és a foglaláskor megadott adataidat az Egyesült Államokban is kezelheti. Részletek az <a href="adatkezeles.html#calendly">adatkezelési tájékoztatóban</a>.</p>
+        <div class="btn-row"><button type="button" class="btn cal-load">Naptár betöltése</button><a class="btn ghost" href="https://calendly.com/nagy-zoltan2223/1hour" target="_blank" rel="noopener">Megnyitás a Calendly oldalán</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -168,6 +170,5 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

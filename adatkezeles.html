@@ -4,10 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adatkezelési tájékoztató – Nagy Zoltán</title>
-  <meta name="description" content="Adatkezelési tájékoztató">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Adatkezelési tájékoztató: milyen adatokat kezelek, milyen célból, meddig, és milyen jogaid vannak.">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 </head>
@@ -31,16 +28,249 @@
 
 <main>
 
-<section class="section"><div class="wrap article stack">
-  <h1 style="font-size:40px">Adatkezelési tájékoztató</h1>
-  <p class="notice amber">VÁZLAT – élesítés előtt egészítsd ki, és nézesd át a könyvelőddel vagy egy jogásszal.</p>
-  <h2>Adatkezelő</h2><p>Nagy Zoltán egyéni vállalkozó · Székhely: [CÍM] · Adószám: [ADÓSZÁM] · E-mail: nagy.zoltan2223@gmail.com</p>
-  <h2>Milyen adatokat kezelek?</h2><p>Az űrlapokon megadott nevet, e-mail-címet, telefonszámot és üzenetet – kizárólag a megkeresésed megválaszolására, órák és konzultációk egyeztetésére, illetve hozzájárulás esetén hírlevél küldésére.</p>
-  <h2>Jogalap és időtartam</h2><p>[Hozzájárulás / szerződés előkészítése; meddig őrzöd az adatokat]</p>
-  <h2>Adatfeldolgozók</h2><p>Tárhely: GitHub Inc. (GitHub Pages). Időpontfoglalás: Calendly LLC. E-mail: Google LLC (Gmail). [Hírlevélküldő, ha lesz, pl. MailerLite]</p>
-  <h2>Jogaid</h2><p>Kérheted az adataidhoz való hozzáférést, helyesbítést, törlést; panasszal a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH) fordulhatsz.</p>
-  <h2>Sütik</h2><p>Az oldal saját maga nem használ követő sütiket. A beágyazott Calendly-naptár a Calendly saját sütijeit használhatja; a betűtípusokat a Google Fonts szolgáltatja.</p>
-</div></section>
+<section class="section dark">
+  <div class="wrap stack">
+    <span class="eyebrow">Adatvédelem</span>
+    <h1>Adatkezelési tájékoztató</h1>
+    <p class="lead">Itt olvashatod el, milyen személyes adatokat kezelek rólad, mire használom őket, meddig őrzöm, kinek adhatom át, és milyen jogaid vannak. Igyekeztem érthetően megírni – ha valami mégsem világos, írj nekem.</p>
+    <p class="small">Hatályos: 2026. október 29-től</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap article stack">
+
+    <nav class="card" aria-label="Tartalom">
+      <strong>Tartalom</strong>
+      <ol style="margin:0;padding-left:20px;columns:2;column-gap:32px">
+        <li><a href="#szemlelet">Az én szemléletem</a></li>
+        <li><a href="#adatkezelo">Ki kezeli az adataidat?</a></li>
+        <li><a href="#jogszabalyok">Jogszabályi háttér</a></li>
+        <li><a href="#fogalmak">Fontos fogalmak</a></li>
+        <li><a href="#celok">Adatkezelések részletesen</a></li>
+        <li><a href="#kiskoruak">Kiskorúak adatai</a></li>
+        <li><a href="#feldolgozok">Adatfeldolgozók, címzettek</a></li>
+        <li><a href="#tovabbitas">Adattovábbítás az EU-n kívülre</a></li>
+        <li><a href="#sutik">Sütik és a weboldal működése</a></li>
+        <li><a href="#tarolas">Adattárolás és adatbiztonság</a></li>
+        <li><a href="#incidens">Adatvédelmi incidens</a></li>
+        <li><a href="#jogok">Jogaid</a></li>
+        <li><a href="#jogorvoslat">Panasz és jogorvoslat</a></li>
+        <li><a href="#modositas">A tájékoztató módosítása</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="szemlelet">1. Az én szemléletem az adataidról</h2>
+    <p>Pénzügyi tanácsadóként és tanárként azt látom, hogy a bizalom mindennek az alapja. Az adataidat ugyanúgy kezelem, ahogy azt tanítom a pénzügyekről: <strong>átláthatóan, csak annyit, amennyi feltétlenül szükséges, és felelősen.</strong></p>
+    <ul>
+      <li><strong>Csak azt kérem, ami kell.</strong> Egy óra egyeztetéséhez elég a neved, az elérhetőséged és az, hogy miben segíthetek.</li>
+      <li><strong>Nem adom el és nem adom tovább</strong> az adataidat reklámcélra – senkinek, soha.</li>
+      <li><strong>Nem követlek.</strong> Az oldalon nincs Google Analytics, nincs Facebook-pixel, nincs reklámkövetés. A betűtípusokat is a saját tárhelyemről töltöm be, hogy a látogatásod ne jusson el harmadik félhez.</li>
+      <li><strong>A pénzügyi adataid nálad maradnak.</strong> A kalkulátorok a te böngésződben számolnak, semmit nem küldenek el. A letölthető Excel-táblázatokat a saját gépeden töltöd ki – amit beleírsz, ahhoz én nem férek hozzá.</li>
+      <li><strong>Nem őrzöm tovább, mint kell.</strong> Minden adatkezelésnél leírom, meddig tárolom az adatot, és utána törlöm.</li>
+      <li><strong>Bármikor kérdezhetsz.</strong> Ha tudni szeretnéd, mit tárolok rólad, vagy kéred a törlést, egy e-mail elég.</li>
+    </ul>
+
+    <h2 id="adatkezelo">2. Ki kezeli az adataidat? (Adatkezelő)</h2>
+    <div class="table-wrap"><table>
+      <tbody>
+        <tr><th scope="row">Név</th><td>Nagy Zoltán egyéni vállalkozó</td></tr>
+        <tr><th scope="row">Székhely</th><td>[SZÉKHELY]</td></tr>
+        <tr><th scope="row">Adószám</th><td>[ADÓSZÁM]</td></tr>
+        <tr><th scope="row">EV nyilvántartási szám</th><td>[NYILVÁNTARTÁSI SZÁM]</td></tr>
+        <tr><th scope="row">E-mail</th><td><a href="mailto:nagy.zoltan2223@gmail.com">nagy.zoltan2223@gmail.com</a></td></tr>
+        <tr><th scope="row">Telefon</th><td><a href="tel:+36301966102">06 30 196 6102</a></td></tr>
+        <tr><th scope="row">Weboldal</th><td>nagyzoltan25.github.io</td></tr>
+      </tbody>
+    </table></div>
+    <p>Adatvédelmi tisztviselő kinevezésére nem vagyok köteles (GDPR 37. cikk), mert nem végzek nagy számú érintettet rendszeresen megfigyelő vagy különleges adatokat nagy számban kezelő tevékenységet. Adatvédelmi kérdésekben közvetlenül engem kereshetsz a fenti elérhetőségeken.</p>
+
+    <h2 id="jogszabalyok">3. Jogszabályi háttér</h2>
+    <p>Az adatkezelés során elsősorban az alábbi jogszabályok szerint járok el:</p>
+    <ul>
+      <li>az Európai Parlament és a Tanács (EU) 2016/679 rendelete a természetes személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok szabad áramlásáról (<strong>GDPR</strong>);</li>
+      <li>2011. évi CXII. törvény az információs önrendelkezési jogról és az információszabadságról (<strong>Infotv.</strong>);</li>
+      <li>2001. évi CVIII. törvény az elektronikus kereskedelmi szolgáltatások, valamint az információs társadalommal összefüggő szolgáltatások egyes kérdéseiről (<strong>Ektv.</strong>);</li>
+      <li>2003. évi C. törvény az elektronikus hírközlésről (<strong>Eht.</strong>) – különösen a sütikre vonatkozó 155. § (4) bekezdés;</li>
+      <li>2008. évi XLVIII. törvény a gazdasági reklámtevékenység alapvető feltételeiről és egyes korlátairól (<strong>Grt.</strong>) – különösen a hírlevelekre vonatkozó 6. §;</li>
+      <li>2000. évi C. törvény a számvitelről (<strong>Számv. tv.</strong>) – különösen a 169. §;</li>
+      <li>2017. évi CL. törvény az adózás rendjéről (<strong>Art.</strong>);</li>
+      <li>2013. évi V. törvény a Polgári Törvénykönyvről (<strong>Ptk.</strong>).</li>
+    </ul>
+
+    <h2 id="fogalmak">4. Fontos fogalmak röviden</h2>
+    <ul>
+      <li><strong>Személyes adat:</strong> minden információ, amely alapján azonosíthatók vagy azonosíthatóvá válnak (pl. név, e-mail-cím, telefonszám, IP-cím).</li>
+      <li><strong>Érintett:</strong> te, akinek az adatait kezelem.</li>
+      <li><strong>Adatkezelő:</strong> aki meghatározza az adatkezelés célját és eszközeit – ezen az oldalon én.</li>
+      <li><strong>Adatfeldolgozó:</strong> aki az én megbízásomból, az én utasításaim szerint kezel adatot (pl. a tárhelyszolgáltató vagy az időpontfoglaló rendszer).</li>
+      <li><strong>Hozzájárulás:</strong> önkéntes, konkrét, tájékoztatáson alapuló és egyértelmű beleegyezés, amelyet bármikor visszavonhatsz.</li>
+    </ul>
+
+    <h2 id="celok">5. Adatkezelések részletesen</h2>
+
+    <h3>5.1. Kapcsolatfelvétel (üzenet űrlap, e-mail, telefon, Discord)</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>A kérdésed megválaszolása, óra vagy tanácsadás egyeztetése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>Név, e-mail-cím, telefonszám (ha megadod), téma, évfolyam/szint, az üzenet tartalma, Discord-felhasználónév (ha ott írsz).</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) b) pont – a te kérésedre, a szerződés megkötését megelőző lépések megtétele; szerződéshez nem kapcsolódó kérdésnél GDPR 6. cikk (1) f) pont – jogos érdekem, hogy válaszolni tudjak a megkeresésedre.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>Ha nem jön létre szerződés: a megkeresést követő <strong>1 évig</strong>, utána törlöm. Ha létrejön: az 5.4. pont szerint.</td></tr>
+      <tr><th scope="row">Megjegyzés</th><td>Az oldalon lévő űrlapok nem küldenek adatot szerverre: a gombra kattintva a saját levelezőprogramod nyílik meg a kitöltött üzenettel, és te küldöd el nekem e-mailben.</td></tr>
+    </tbody></table></div>
+
+    <h3>5.2. Páros és csoportos órára jelentkezés</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>A közös óra megszervezése, a résztvevők és az időpont egyeztetése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>A jelentkező neve, telefonszáma, e-mail-címe, évfolyama, iskolája (nem kötelező), a tárgy, a létszám, a célok és időpontok, valamint <strong>a társak neve</strong>.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>A jelentkező adatainál GDPR 6. cikk (1) b) pont; a társak nevénél GDPR 6. cikk (1) f) pont – jogos érdekem a közös óra megszervezése.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>Ha nem jön létre óra: legfeljebb <strong>1 évig</strong>. A társak nevét csak az egyeztetéshez használom; ha ők maguk nem lépnek kapcsolatba velem, <strong>30 napon belül</strong> törlöm.</td></tr>
+      <tr><th scope="row">Kérés a jelentkezőhöz</th><td>Kérlek, csak akkor írd be a társaid nevét, ha ők tudnak róla, és egyetértenek vele. A társaid tőlem is bármikor kérhetik az adataik törlését.</td></tr>
+    </tbody></table></div>
+
+    <h3 id="calendly">5.3. Online időpontfoglalás (Calendly)</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>Korrepetálási óra vagy pénzügyi tanácsadás időpontjának lefoglalása, emlékeztető küldése, az online óra linkjének megküldése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>Név, e-mail-cím, a választott időpont, a foglaláskor megadott válaszok (korrepetálásnál: életkor és a cél, pl. érettségi, témazáró; tanácsadásnál: az érdeklődési témák), valamint az időzónád. A Calendly technikai adatokat (pl. IP-cím, böngésző típusa) és sütiket is kezel.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>A foglalási adatoknál GDPR 6. cikk (1) b) pont – a szerződés megkötését megelőző lépések a te kérésedre. A naptár betöltésénél (sütik) GDPR 6. cikk (1) a) pont és Eht. 155. § (4) – a hozzájárulásod, amit a „Naptár betöltése” gombbal adsz meg.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>Ha nem jön létre szerződés: az időpontot követő <strong>1 évig</strong>; egyébként az 5.4. pont szerint.</td></tr>
+      <tr><th scope="row">Hogyan működik</th><td>A naptár <strong>csak akkor töltődik be, ha rákattintasz</strong> a „Naptár betöltése” gombra. Addig a Calendly nem kap rólad semmilyen adatot. Ha nem szeretnéd használni, telefonon vagy e-mailben is foglalhatsz időpontot.</td></tr>
+      <tr><th scope="row">Szolgáltató</th><td>Calendly LLC (Egyesült Államok) – a <a href="#feldolgozok">7. pontban</a> és a <a href="#tovabbitas">8. pontban</a> részletezve. A Calendly a beágyazott naptárban elhelyezett sütik tekintetében önálló adatkezelőnek minősül; ezekről a <a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener">Calendly adatvédelmi tájékoztatójában</a> olvashatsz.</td></tr>
+    </tbody></table></div>
+
+    <h3>5.4. Korrepetálás: az órák megtartása és elszámolása</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>A korrepetálási szolgáltatás teljesítése: órák megtartása, a haladás követése, az órák elszámolása, lemondások kezelése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>A diák neve, évfolyama, iskolája/egyeteme, tantárgy, az órák időpontjai és száma, az órákon felmerülő tanulmányi információk (pl. témakörök, dolgozatok, eredmények, amelyeket megosztasz), elérhetőségek; kiskorú diák esetén a szülő/törvényes képviselő neve és elérhetősége; a fizetéssel kapcsolatos adatok (összeg, időpont, utaló neve).</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) b) pont – szerződés teljesítése.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>Az együttműködés végétől számított <strong>5 évig</strong> (a Ptk. 6:22. § szerinti általános elévülési idő), a tanulmányi jegyzeteket legkésőbb az együttműködés végét követő <strong>1 évben</strong> törlöm.</td></tr>
+      <tr><th scope="row">Online órák</th><td>Az órák Discordon vagy Google Meeten zajlanak. <strong>Az órákról nem készítek hang- vagy képfelvételt</strong> – kivéve, ha ezt kifejezetten kéred, és mindketten (kiskorúnál a szülő is) előre hozzájárulunk.</td></tr>
+    </tbody></table></div>
+
+    <h3>5.5. Számlázás és könyvelés</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>A jogszabály szerint kötelező számla kiállítása, könyvelése és megőrzése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>Név, cím (számlázási cím), adószám (ha van), a szolgáltatás megnevezése, összege, a teljesítés ideje.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) c) pont – jogi kötelezettség teljesítése (Számv. tv. 169. §, Art., az általános forgalmi adóról szóló 2007. évi CXXVII. törvény).</td></tr>
+      <tr><th scope="row">Időtartam</th><td>A számviteli bizonylatokat a Számv. tv. 169. § (2) bekezdése alapján <strong>8 évig</strong> kell megőriznem.</td></tr>
+    </tbody></table></div>
+
+    <h3>5.6. Pénzügyi tanácsadás</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>Az ismerkedő beszélgetés egyeztetése és megtartása, a pénzügyi helyzeted és céljaid átbeszélése, személyre szabott javaslat előkészítése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>Név, elérhetőségek, életkor, családi helyzet, a bevételeidre, kiadásaidra, megtakarításaidra, hiteleidre, biztosításaidra és pénzügyi céljaidra vonatkozó információk – <strong>csak az, amit te megosztasz velem</strong>.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) b) pont – a szerződés megkötését megelőző lépések a te kérésedre.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>Ha nem jön létre szerződés: a beszélgetést követő <strong>1 évig</strong>.</td></tr>
+      <tr><th scope="row">Pénzügyi termék közvetítése</th><td>Ha a beszélgetés után pénzügyi terméket (pl. megtakarítást, biztosítást, hitelt) szeretnél kötni, a szerződéskötéssel kapcsolatos adatkezelésről – beleértve a pénzmosás megelőzéséről szóló 2017. évi LIII. törvény szerinti ügyfélazonosítást is – <strong>az első érdemi találkozón külön, írásos tájékoztatást kapsz</strong> arról, hogy kinek a nevében járok el, és ki kezeli ott az adataidat (a közvetítő és a választott pénzügyi intézmény saját adatkezelési tájékoztatója szerint).</td></tr>
+    </tbody></table></div>
+
+    <h3>5.7. Hírlevél, értesítés új anyagokról és a bolt indulásáról</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>Értesítés új cikkekről, ingyenes anyagokról, kalkulátorokról és a bolt indulásáról; pénzügyi tippek küldése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>Keresztnév, e-mail-cím, az érdeklődési kör (pl. melyik termék érdekel), a feliratkozás ideje.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) a) pont – a hozzájárulásod; Grt. 6. § (1) bekezdés – a reklámot tartalmazó levelekhez kifejezett, előzetes hozzájárulás szükséges.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>A hozzájárulás visszavonásáig (leiratkozásig). Leiratkozni bármikor, indoklás nélkül, ingyenesen lehet: minden levél alján található linkkel, vagy egy e-maillel. A leiratkozás után az adataidat haladéktalanul törlöm.</td></tr>
+    </tbody></table></div>
+
+    <h3>5.8. Ingyenes letölthető anyagok és kalkulátorok</h3>
+    <p>Az Excel-táblázatok letöltéséhez <strong>nem kell regisztrálnod, és semmilyen adatot nem kérek</strong>. A kalkulátorok teljes egészében a böngésződben futnak; a beírt számokat nem tárolom és nem kapom meg. Amit a letöltött táblázatokba írsz, az csak a saját eszközödön van.</p>
+
+    <h3>5.9. A weboldal technikai működése (szervernaplók)</h3>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Cél</th><td>A weboldal elérhetővé tétele és biztonságos működtetése, visszaélések megelőzése.</td></tr>
+      <tr><th scope="row">Kezelt adatok</th><td>IP-cím, a látogatás időpontja, a megtekintett oldal, böngésző- és eszközadatok.</td></tr>
+      <tr><th scope="row">Ki kezeli</th><td>A tárhelyszolgáltató (GitHub, Inc.), amely a GitHub Pages dokumentációja szerint minden látogató IP-címét biztonsági célból naplózza és tárolja. Ezekhez az adatokhoz <strong>én nem férek hozzá</strong>.</td></tr>
+      <tr><th scope="row">Jogalap</th><td>GDPR 6. cikk (1) f) pont – jogos érdek a weboldal biztonságos működtetéséhez.</td></tr>
+      <tr><th scope="row">Időtartam</th><td>A <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub adatvédelmi nyilatkozata</a> szerint.</td></tr>
+    </tbody></table></div>
+
+    <h2 id="kiskoruak">6. Kiskorúak adatai</h2>
+    <p>Korrepetálást 9. osztálytól vállalok, ezért diákjaim egy része kiskorú.</p>
+    <ul>
+      <li><strong>16 év alatti</strong> diák esetén a hozzájáruláson alapuló adatkezeléshez (pl. hírlevél, Calendly-naptár betöltése) a szülő vagy törvényes képviselő hozzájárulása szükséges (GDPR 8. cikk).</li>
+      <li><strong>18 év alatti</strong> diák esetén a korrepetálási megállapodást a szülővel vagy a törvényes képviselővel kötöm meg, illetve az ő hozzájárulásával (Ptk. 2:12. §). Az órák egyeztetésében a szülőt is bevonom.</li>
+      <li>Kiskorú diák adatait csak az órák megtartásához szükséges mértékben kezelem, és a tanulmányi eredményeiről csak a diákkal és a szülővel/törvényes képviselővel beszélek.</li>
+      <li>Ha kiderül, hogy egy 16 év alatti diák szülői hozzájárulás nélkül iratkozott fel valamire, az adatait törlöm.</li>
+    </ul>
+
+    <h2 id="feldolgozok">7. Adatfeldolgozók és címzettek</h2>
+    <p>Az alábbi szolgáltatókat veszem igénybe; ők csak az én megbízásomból, a szolgáltatásuk nyújtásához szükséges mértékben férnek hozzá az adatokhoz.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Szolgáltató</th><th>Tevékenység</th><th>Érintett adatok</th></tr></thead>
+      <tbody>
+        <tr><td>GitHub, Inc.<br><span class="small muted">88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</span></td><td>Weboldal tárhely (GitHub Pages)</td><td>Szervernaplók (IP-cím, technikai adatok)</td></tr>
+        <tr><td>Calendly LLC<br><span class="small muted">USA – calendly.com</span></td><td>Online időpontfoglalás, emlékeztetők</td><td>Foglalási adatok (5.3. pont)</td></tr>
+        <tr><td>Google Ireland Limited<br><span class="small muted">Gordon House, Barrow Street, Dublin 4, Írország</span></td><td>E-mail (Gmail), naptár (Google Naptár), online órák (Google Meet)</td><td>Levelezés, időpontok, a videóhívás technikai adatai</td></tr>
+        <tr><td>Discord<br><span class="small muted">discord.com</span></td><td>Online órák, üzenetek (ha ezt választod)</td><td>Felhasználónév, üzenetek, a hívás technikai adatai</td></tr>
+        <tr><td>Könyvelési szolgáltató</td><td>Könyvelés, adóbevallások</td><td>Számlaadatok (5.5. pont)</td></tr>
+        <tr><td>Számlázó program szolgáltatója<br><span class="small muted">[A számlázó program neve]</span></td><td>Számlák kiállítása, NAV-adatszolgáltatás</td><td>Számlaadatok (5.5. pont)</td></tr>
+        <tr><td>Hírlevélküldő szolgáltató<br><span class="small muted">[Ha lesz: pl. MailerLite]</span></td><td>Hírlevelek küldése</td><td>Keresztnév, e-mail-cím (5.7. pont)</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Hatóságok:</strong> jogszabályban előírt esetben (pl. a NAV, bíróság vagy más hatóság megkeresésére) a szükséges adatokat átadhatom. Ezen kívül <strong>senkinek nem adom át</strong> az adataidat, és semmilyen formában nem adom el őket.</p>
+
+    <h2 id="tovabbitas">8. Adattovábbítás az Európai Unión kívülre</h2>
+    <p>A GitHub, a Calendly és – egyes szolgáltatásai esetén – a Google is az Egyesült Államokban kezelhet adatokat. Az Európai Bizottság 2023. július 10-én elfogadta az <strong>EU–USA adatvédelmi keretrendszerről</strong> (Data Privacy Framework) szóló megfelelőségi határozatot; az ebben tanúsítvánnyal rendelkező amerikai vállalatokhoz az adattovábbítás külön engedély nélkül megengedett (GDPR 45. cikk). Ha egy szolgáltató tanúsítványa nem érvényes, a továbbítás az Európai Bizottság által elfogadott általános szerződési feltételek (GDPR 46. cikk) alapján történik. Egy szolgáltató aktuális tanúsítványát a <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">dataprivacyframework.gov</a> oldalon ellenőrizheted.</p>
+
+    <h2 id="sutik">9. Sütik (cookie-k) és a weboldal működése</h2>
+    <ul>
+      <li><strong>Az oldal saját maga nem használ sütiket,</strong> nem használ látogatottságmérőt (pl. Google Analytics), közösségimédia-pixelt vagy reklámkövetést.</li>
+      <li>A betűtípusokat (Inter, Manrope) a saját tárhelyemről töltöm be, így a látogatásodról <strong>nem kap adatot a Google</strong>.</li>
+      <li>A <strong>Calendly időpontfoglaló naptár</strong> csak akkor töltődik be, ha a „Naptár betöltése” gombra kattintasz. Ekkor a Calendly sütiket helyezhet el a böngésződben, és technikai adatokat kezel – ehhez a kattintással járulsz hozzá (Eht. 155. § (4)). Ha nem kattintasz, a Calendly nem kap rólad adatot.</li>
+      <li>A sütiket a böngésződ beállításaiban bármikor törölheted vagy letilthatod.</li>
+    </ul>
+
+    <h2 id="tarolas">10. Adattárolás és adatbiztonság</h2>
+    <p><strong>Hol tárolom az adataidat?</strong></p>
+    <ul>
+      <li><strong>E-mailek és üzenetek:</strong> a Gmail-fiókomban.</li>
+      <li><strong>Időpontok:</strong> a Calendlyben és a Google Naptáramban.</li>
+      <li><strong>Az órák nyilvántartása és elszámolása</strong> (diák neve, órák száma, díjak): saját, jelszóval védett eszközeimen tárolt táblázatban.</li>
+      <li><strong>Számlák:</strong> a számlázó programban és a könyvelőnél.</li>
+      <li>Papíralapú iratot csak akkor tárolok, ha jogszabály előírja; ezeket zárt helyen tartom.</li>
+    </ul>
+    <p><strong>Hogyan védem őket?</strong> Az adatok biztonságát a GDPR 32. cikke szerint, a kockázatokkal arányos intézkedésekkel biztosítom:</p>
+    <ul>
+      <li>a fiókjaimat erős, egyedi jelszóval és – ahol a szolgáltató lehetővé teszi – kétlépcsős azonosítással védem;</li>
+      <li>az eszközeim jelszóval vagy biometrikus azonosítással zároltak, a rendszereket rendszeresen frissítem;</li>
+      <li>a weboldal kizárólag titkosított (HTTPS) kapcsolaton keresztül érhető el;</li>
+      <li>az adatokhoz rajtam és a fenti adatfeldolgozókon kívül senki nem fér hozzá;</li>
+      <li>a megőrzési idő lejártakor az adatokat törlöm – ezt évente legalább egyszer átnézem.</li>
+    </ul>
+    <p><strong>Automatizált döntéshozatal, profilalkotás:</strong> nem alkalmazok olyan automatizált döntéshozatalt vagy profilalkotást, amely rád nézve joghatással járna (GDPR 22. cikk).</p>
+
+    <h2 id="incidens">11. Adatvédelmi incidens</h2>
+    <p>Ha adatvédelmi incidens történik (pl. illetéktelen hozzáférés, adatvesztés), azt nyilvántartásba veszem, és – ha az a jogaidra kockázatot jelent – <strong>72 órán belül bejelentem</strong> a Nemzeti Adatvédelmi és Információszabadság Hatóságnak (GDPR 33. cikk). Ha az incidens valószínűsíthetően magas kockázattal jár rád nézve, téged is indokolatlan késedelem nélkül tájékoztatlak (GDPR 34. cikk).</p>
+
+    <h2 id="jogok">12. Jogaid</h2>
+    <p>A GDPR alapján az alábbi jogok illetnek meg. Kérésedet a fenti e-mail-címre vagy telefonszámra küldheted; <strong>legkésőbb 1 hónapon belül</strong> válaszolok, ami indokolt esetben további 2 hónappal meghosszabbítható – erről a kérésed beérkezésétől számított 1 hónapon belül tájékoztatlak (GDPR 12. cikk (3)). A jogaid gyakorlása főszabály szerint ingyenes. A kérés teljesítése előtt szükség lehet a személyazonosságod megerősítésére.</p>
+    <ul>
+      <li><strong>Tájékoztatáshoz és hozzáféréshez való jog</strong> (15. cikk): megkérdezheted, kezelem-e az adataidat, és ha igen, másolatot kérhetsz róluk.</li>
+      <li><strong>Helyesbítéshez való jog</strong> (16. cikk): kérheted a pontatlan adatok javítását, a hiányosak kiegészítését.</li>
+      <li><strong>Törléshez való jog</strong> (17. cikk): kérheted az adataid törlését, ha már nincs szükség rájuk, visszavontad a hozzájárulásodat, vagy jogellenesen kezelem őket – kivéve, ha jogszabály (pl. a számlák megőrzése) kötelez a megőrzésre.</li>
+      <li><strong>Az adatkezelés korlátozásához való jog</strong> (18. cikk): kérheted, hogy bizonyos esetekben (pl. vitatod az adat pontosságát) az adatot csak tároljam, de ne használjam.</li>
+      <li><strong>Adathordozhatósághoz való jog</strong> (20. cikk): a hozzájárulás vagy szerződés alapján kezelt adataidat géppel olvasható formában megkaphatod, vagy kérheted, hogy továbbítsam egy másik adatkezelőnek.</li>
+      <li><strong>Tiltakozáshoz való jog</strong> (21. cikk): a jogos érdeken alapuló adatkezelés ellen bármikor tiltakozhatsz; ilyenkor az adatot nem kezelem tovább, kivéve, ha kényszerítő erejű jogos ok indokolja.</li>
+      <li><strong>A hozzájárulás visszavonásának joga</strong> (7. cikk (3)): a hozzájárulásodat bármikor visszavonhatod; ez nem érinti a visszavonás előtti adatkezelés jogszerűségét.</li>
+    </ul>
+
+    <h2 id="jogorvoslat">13. Panasz és jogorvoslat</h2>
+    <p>Ha úgy érzed, hogy megsértettem az adatvédelmi jogaidat, kérlek, <strong>először keress meg engem</strong> – igyekszem gyorsan és korrekten rendezni a helyzetet. Emellett jogod van:</p>
+    <p><strong>Panaszt tenni a felügyeleti hatóságnál:</strong></p>
+    <div class="table-wrap"><table><tbody>
+      <tr><th scope="row">Név</th><td>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</td></tr>
+      <tr><th scope="row">Székhely</th><td>1055 Budapest, Falk Miksa utca 9–11.</td></tr>
+      <tr><th scope="row">Postacím</th><td>1363 Budapest, Pf. 9.</td></tr>
+      <tr><th scope="row">Telefon</th><td>+36 1 391 1400</td></tr>
+      <tr><th scope="row">E-mail</th><td>ugyfelszolgalat@naih.hu</td></tr>
+      <tr><th scope="row">Weboldal</th><td><a href="https://naih.hu" target="_blank" rel="noopener">naih.hu</a></td></tr>
+    </tbody></table></div>
+    <p><strong>Bírósághoz fordulni:</strong> jogaid megsértése esetén bírósághoz is fordulhatsz (GDPR 79. cikk, Infotv. 23. §). A per elbírálása a törvényszék hatáskörébe tartozik; a pert – választásod szerint – a lakóhelyed vagy tartózkodási helyed szerinti törvényszék előtt is megindíthatod.</p>
+
+    <h2 id="modositas">14. A tájékoztató módosítása</h2>
+    <p>Ha új szolgáltatást indítok (pl. fizetős bolt, online kurzus, hírlevélküldő rendszer), vagy változik a jogszabályi környezet, ezt a tájékoztatót frissítem. A változásokat ezen az oldalon teszem közzé, a hatálybalépés dátumával együtt; lényeges változás esetén az érintetteket e-mailben is értesítem, ha az elérhetőségük megvan.</p>
+    <p class="small muted">Hatályos: 2026. október 29-től.</p>
+  </div>
+</section>
 
 </main>
 
@@ -70,6 +300,5 @@
   </div>
 </footer>
 <script src="assets/main.js"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

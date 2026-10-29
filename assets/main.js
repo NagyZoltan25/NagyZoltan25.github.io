@@ -80,3 +80,18 @@ document.querySelectorAll('form[data-mailto]').forEach(function (form) {
   });
   megtakaritas(); hitel(); tartalek();
 })();
+
+/* Calendly: csak kattintásra töltődik be (sütik és adattovábbítás csak hozzájárulással) */
+document.querySelectorAll('.cal-box').forEach(function (box) {
+  var btn = box.querySelector('.cal-load');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var url = box.getAttribute('data-cal-url');
+    box.innerHTML = '<div class="calendly-inline-widget" style="min-width:320px;height:760px"></div>';
+    var target = box.firstChild;
+    var s = document.createElement('script');
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.onload = function () { window.Calendly.initInlineWidget({ url: url, parentElement: target }); };
+    document.body.appendChild(s);
+  });
+});
