@@ -95,3 +95,17 @@ document.querySelectorAll('.cal-box').forEach(function (box) {
     document.body.appendChild(s);
   });
 });
+
+/* Umami eseménymérés: letöltések, naptár, űrlapok (sütimentes, anonim) */
+function track(name, data) { try { if (window.umami) window.umami.track(name, data); } catch (e) {} }
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a,button'); if (!a) return;
+  if (a.hasAttribute('download')) track('Letöltés', { fájl: decodeURIComponent((a.getAttribute('href') || '').split('/').pop()) });
+  else if (a.classList.contains('cal-load')) track('Naptár betöltése', { oldal: location.pathname });
+  else if ((a.getAttribute('href') || '').indexOf('calendly.com') > -1) track('Calendly megnyitása', { oldal: location.pathname });
+  else if ((a.getAttribute('href') || '').indexOf('tel:') === 0) track('Telefon kattintás');
+  else if ((a.getAttribute('href') || '').indexOf('mailto:') === 0) track('E-mail kattintás');
+});
+document.querySelectorAll('form[data-mailto]').forEach(function (f) {
+  f.addEventListener('submit', function () { track('Űrlap', { típus: f.getAttribute('data-mailto') }); });
+});
