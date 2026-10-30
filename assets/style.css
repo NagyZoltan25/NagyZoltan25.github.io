@@ -284,3 +284,6 @@ figure.chart{margin:0}
  .sstep::before{top:-24px;height:26px}
  .stext{margin-top:6px}
 }
+.cal-embed{display:flex;flex-direction:column;gap:10px}
+.cal-embed iframe{border:1px solid var(--line);border-radius:var(--radius);background:#fff;min-height:760px}
+@media (max-width:640px){.cal-embed iframe{min-height:1000px;height:1000px}}
