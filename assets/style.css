@@ -241,3 +241,11 @@ figure.chart{margin:0}
 .checks li{padding-left:30px;position:relative}
 .checks li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
 .lc-m{display:none}@media (max-width:600px){.lc-d{display:none}.lc-m{display:block}}
+/* Tanácsadás témakörök */
+.topics{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.topic{display:flex;gap:14px;align-items:flex-start;padding:20px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);transition:border-color .15s,box-shadow .15s}
+.topic:hover{border-color:var(--accent);box-shadow:0 6px 18px rgba(16,33,58,.07)}
+.ticon{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ticon .ic{width:26px;height:26px}
+.topic h3{font-size:17px;margin-bottom:4px}
+.topic p{font-size:14.5px;color:var(--muted);line-height:1.5}
