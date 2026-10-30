@@ -109,3 +109,18 @@ document.addEventListener('click', function (e) {
 document.querySelectorAll('form[data-mailto]').forEach(function (f) {
   f.addEventListener('submit', function () { track('Űrlap', { típus: f.getAttribute('data-mailto') }); });
 });
+
+/* Tally jelentkezési űrlap: csak kattintásra töltődik be */
+document.querySelectorAll('.tally-box').forEach(function (box) {
+  var btn = box.querySelector('.tally-load');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var id = box.getAttribute('data-tally-id');
+    box.innerHTML = '<iframe data-tally-src="https://tally.so/embed/' + id + '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Jelentkezés – pénzügyi tanácsadói pálya" style="border:0;width:100%"></iframe>';
+    var s = document.createElement('script');
+    s.src = 'https://tally.so/widgets/embed.js';
+    s.onload = function () { if (window.Tally) window.Tally.loadEmbeds(); };
+    document.body.appendChild(s);
+    track('Jelentkezési űrlap megnyitása');
+  });
+});
