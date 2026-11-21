@@ -1,6 +1,6 @@
 /* ===== BEÁLLÍTÁSOK – ezeket írd át ===== */
 var CONFIG = {
-  email: 'nagy.zoltan2223@gmail.com'   // ide érkeznek az űrlapok (e-mail-program nyílik meg)
+  email: 'nagy.zoltan@nzakademia.hu'   // ide érkeznek az űrlapok (e-mail-program nyílik meg)
 };
 
 /* Mobilmenü */
