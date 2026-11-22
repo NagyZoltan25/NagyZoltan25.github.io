@@ -339,3 +339,35 @@ figure.chart{margin:0}
   .about-stats{grid-template-columns:1fr 1fr;row-gap:24px}
   .about-stats>div:nth-child(3){border-left:0;padding-left:0}
 }
+
+/* ===== Tanácsadás v2 ===== */
+.adv-hero{display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center}
+.adv-card{background:var(--navy-card);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.adv-card h2{font-size:22px;color:#fff}
+.ticks.light li{color:#DCE3EC}
+.ticks.light b{color:#fff}
+.adv-me{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);text-decoration:none}
+.adv-me img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-light)}
+.adv-me b{display:block;color:#fff}
+.adv-me span{font-size:14px;color:#C9D2DE}
+.adv-me.dark-text{border-top:0;padding:12px 16px;border:1px solid var(--line);border-radius:14px}
+.adv-me.dark-text b{color:var(--ink)} .adv-me.dark-text span{color:var(--accent);font-weight:600}
+.adv-me.dark-text:hover{border-color:var(--accent)}
+.tgroups{display:flex;flex-direction:column;gap:40px}
+.tgroup{display:grid;grid-template-columns:240px 1fr;gap:32px;padding-top:32px;border-top:1px solid var(--line)}
+.tgroup:first-child{border-top:0;padding-top:0}
+.tgroup-head{display:flex;gap:14px;align-items:flex-start;position:sticky;top:100px;align-self:start}
+.tg-num{font-family:Manrope,sans-serif;font-weight:800;font-size:14px;color:#fff;background:var(--accent);border-radius:10px;min-width:36px;height:36px;display:grid;place-items:center}
+.tgroup-head h3{font-size:20px;margin:4px 0}
+.tgroup-head p{font-size:14px;color:var(--muted)}
+.tgroup .topics{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.book-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.excel-band{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:36px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.faq details{max-width:860px}
+@media (max-width:900px){
+  .adv-hero,.tgroup,.excel-band{grid-template-columns:1fr}
+  .adv-hero{gap:32px}
+  .tgroup{gap:16px}
+  .tgroup-head{position:static}
+  .excel-band{padding:24px}
+}
