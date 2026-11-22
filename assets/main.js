@@ -159,3 +159,13 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
   }
   window.addEventListener('scroll',upd,{passive:true}); upd();
 })();
+
+/* Nappali / éjszakai mód */
+(function(){
+  var b=document.querySelector('.theme-btn'); if(!b) return;
+  b.addEventListener('click',function(){
+    var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    try{localStorage.setItem('nz-theme',next);}catch(e){}
+  });
+})();
