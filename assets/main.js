@@ -124,3 +124,25 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
     track('Jelentkezési űrlap megnyitása');
   });
 });
+
+/* Élő számlálók (data/stats.json) */
+(function(){
+  var els=document.querySelectorAll('[data-stat]'); if(!els.length) return;
+  var fmt=function(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');};
+  function animate(el,to){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=fmt(to);return;}
+    var dur=1800,t0=null;
+    function step(t){t0=t0||t;var p=Math.min((t-t0)/dur,1);el.textContent=fmt(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+    setTimeout(function(){el.textContent=fmt(to);},dur+300);
+  }
+  function apply(st){
+    var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);animate(e.target,+e.target.dataset.to);}});},{threshold:.4}):null;
+    els.forEach(function(el){
+      var v=st[el.dataset.stat]; if(typeof v!=='number') return;
+      if(el.hasAttribute('data-count')&&io){el.dataset.to=v;el.textContent='0';io.observe(el);}
+      else el.textContent=fmt(v);
+    });
+  }
+  fetch('data/stats.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(apply).catch(function(){});
+})();
