@@ -420,3 +420,5 @@ figure.chart{margin:0}
 @media (max-width:980px){.goals2{grid-template-columns:1fr}.lgroups{grid-template-columns:1fr}}
 
 .areas{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.svc .btn-row{margin-top:auto}
+.svc .btn-row .btn{margin-top:0}
