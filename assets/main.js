@@ -147,3 +147,15 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
   }
   fetch('data/stats.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(apply).catch(function(){});
 })();
+
+/* Karrier: lebegő jelentkezés-gomb */
+(function(){
+  var b=document.querySelector('.sticky-cta'); if(!b) return;
+  var form=document.getElementById('jelentkezes'); b.hidden=false; b.classList.add('off');
+  function upd(){
+    var y=window.scrollY, nearForm=false;
+    if(form){var r=form.getBoundingClientRect(); nearForm=r.top<window.innerHeight && r.bottom>0;}
+    b.classList.toggle('off', y<600 || nearForm);
+  }
+  window.addEventListener('scroll',upd,{passive:true}); upd();
+})();
