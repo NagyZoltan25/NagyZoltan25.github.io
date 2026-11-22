@@ -130,6 +130,7 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
   var els=document.querySelectorAll('[data-stat]'); if(!els.length) return;
   var fmt=function(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');};
   function animate(el,to){
+    el.dataset.done='1';
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=fmt(to);return;}
     var dur=1800,t0=null;
     function step(t){t0=t0||t;var p=Math.min((t-t0)/dur,1);el.textContent=fmt(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
@@ -140,7 +141,7 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
     var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);animate(e.target,+e.target.dataset.to);}});},{threshold:.4}):null;
     els.forEach(function(el){
       var v=st[el.dataset.stat]; if(typeof v!=='number') return;
-      if(el.hasAttribute('data-count')&&io){el.dataset.to=v;el.textContent='0';io.observe(el);}
+      if(el.hasAttribute('data-count')&&io){el.dataset.to=v;el.textContent='0';io.observe(el);setTimeout(function(){if(!el.dataset.done){io.unobserve(el);el.textContent=fmt(v);}},3000);}
       else el.textContent=fmt(v);
     });
   }
