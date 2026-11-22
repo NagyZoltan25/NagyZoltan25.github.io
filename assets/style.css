@@ -392,3 +392,29 @@ figure.chart{margin:0}
   .group-wrap{gap:32px}
   .prices{gap:28px}
 }
+
+/* ===== Karrier: célok v2 + hitel részletes ===== */
+.goals2{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gcol2{border-radius:20px;padding:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+.gcol2.g-protect{background:var(--ink);border-color:var(--ink)}
+.g2-head{display:flex;gap:14px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.g-protect .g2-head{border-color:rgba(255,255,255,.14)}
+.g2-num{min-width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center}
+.g2-head h3{margin:0;font-size:20px}
+.g2-head span:not(.g2-num){font-size:14px;color:var(--muted)}
+.g-protect h3{color:#fff}.g-protect .g2-head span:not(.g2-num){color:#C9D2DE}
+.gcol2 ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.gcol2 li{display:flex;gap:12px;align-items:flex-start}
+.gcol2 li .ic{flex:none;width:36px;height:36px;padding:7px;border-radius:10px;background:var(--accent-soft);color:var(--accent)}
+.g-protect li .ic{background:var(--navy-card);color:var(--accent-light)}
+.gcol2 li b{display:block;font-size:15px;color:var(--ink)}
+.gcol2 li span{font-size:13.5px;color:var(--muted)}
+.g-protect li b{color:#fff}.g-protect li span{color:#C9D2DE}
+.goals2 .gbase{grid-column:1/-1}
+.area-wide{grid-column:1/-1}
+.aw-head{display:flex;gap:14px;align-items:center}
+.aw-head h3{margin:0}
+.lgroups{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 32px;margin-top:8px}
+.lgroup{display:flex;flex-direction:column;gap:10px}
+.lgroup h4{margin:0;font-size:15px;color:var(--ink)}
+@media (max-width:980px){.goals2{grid-template-columns:1fr}.lgroups{grid-template-columns:1fr}}
