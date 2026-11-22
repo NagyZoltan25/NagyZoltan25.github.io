@@ -606,3 +606,4 @@ a.contact-card:hover{border-color:var(--accent);transform:translateY(-2px);color
 [data-theme="dark"] .nav a:not(.btn),[data-theme="dark"] .logo,[data-theme="dark"] a.contact-card,[data-theme="dark"] a.persona,[data-theme="dark"] .site-footer a{color:var(--ink)}
 [data-theme="dark"] .nav a[aria-current=page]{color:var(--accent-light)}
 [data-theme="dark"] .site-footer a:hover,[data-theme="dark"] .nav a:not(.btn):hover{color:var(--accent-light)}
+h1,h2{text-wrap:balance}
