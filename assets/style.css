@@ -371,3 +371,24 @@ figure.chart{margin:0}
   .tgroup-head{position:static}
   .excel-band{padding:24px}
 }
+
+/* ===== Korrepetálás v2 ===== */
+.svc-grid.three{grid-template-columns:repeat(3,1fr)}
+.svc .chip{align-self:flex-start}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.pcard{position:relative;display:flex;flex-direction:column;gap:6px;padding:32px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.pcard .btn{margin-top:auto}
+.pcard p{margin:8px 0 18px}
+.pcard.hl{border:2px solid var(--accent);box-shadow:0 16px 40px rgba(30,122,82,.12)}
+.p-name{font-weight:700;color:var(--ink)}
+.p-unit{font-size:14px;color:var(--muted)}
+.p-badge{position:absolute;top:-13px;left:32px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+.group-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.vsteps{list-style:none;margin:0;padding:0;counter-reset:vs;display:flex;flex-direction:column;gap:20px}
+.vsteps li{counter-increment:vs;position:relative;padding-left:52px;display:flex;flex-direction:column;gap:4px}
+.vsteps li::before{content:counter(vs);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:800;display:grid;place-items:center}
+@media (max-width:900px){
+  .svc-grid.three,.prices,.group-wrap{grid-template-columns:1fr}
+  .group-wrap{gap:32px}
+  .prices{gap:28px}
+}
