@@ -169,3 +169,13 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
     try{localStorage.setItem('nz-theme',next);}catch(e){}
   });
 })();
+
+/* Korrepetálás szintkártyák: egyszerre egy legyen nyitva */
+(function(){
+  var ds=document.querySelectorAll('details.lvl'); if(!ds.length) return;
+  ds.forEach(function(d){d.addEventListener('toggle',function(){
+    if(!d.open) return;
+    ds.forEach(function(o){if(o!==d) o.open=false;});
+    setTimeout(function(){d.scrollIntoView({behavior:'smooth',block:'start'});},60);
+  });});
+})();

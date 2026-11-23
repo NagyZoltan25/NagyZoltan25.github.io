@@ -607,3 +607,37 @@ a.contact-card:hover{border-color:var(--accent);transform:translateY(-2px);color
 [data-theme="dark"] .nav a[aria-current=page]{color:var(--accent-light)}
 [data-theme="dark"] .site-footer a:hover,[data-theme="dark"] .nav a:not(.btn):hover{color:var(--accent-light)}
 h1,h2{text-wrap:balance}
+
+/* ===== Korrepetálás: kinyitható szintkártyák ===== */
+.lvl-grid{align-items:start}
+.lvl{cursor:pointer;padding:0!important;overflow:hidden}
+.lvl summary{list-style:none;display:flex;flex-direction:column;gap:12px;padding:28px;outline:none}
+.lvl summary::-webkit-details-marker{display:none}
+.lvl summary:focus-visible{box-shadow:inset 0 0 0 3px var(--accent-light)}
+.lvl:hover{border-color:var(--accent);box-shadow:0 12px 32px rgba(16,33,58,.08)}
+.lvl-more{display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-weight:700;color:var(--accent);align-self:flex-start;padding:8px 14px;border-radius:10px;background:var(--accent-soft)}
+.lvl-more svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.lvl .c{display:none}.lvl[open] .o{display:none}.lvl[open] .c{display:inline}
+.lvl[open] .lvl-more svg{transform:rotate(180deg)}
+.lvl[open]{border-color:var(--accent);cursor:default}
+.lvl[open] summary{cursor:pointer}
+.lvl-body{display:flex;flex-direction:column;gap:12px;padding:0 28px 28px;border-top:1px solid var(--line);padding-top:20px;cursor:auto}
+.lvl-body h4{margin:6px 0 0;font-size:16px;color:var(--ink)}
+.lvl-body .btn{align-self:flex-start;margin-top:8px}
+.lvl-steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.lvl-steps li{color:var(--muted)} .lvl-steps b{color:var(--ink)}
+.lvl-note{padding:14px 16px;border-radius:12px;background:var(--accent-soft);color:var(--ink);font-size:15px}
+[data-theme="dark"] .lvl-more{color:var(--accent-light)}
+@media (max-width:640px){.lvl summary{padding:20px}.lvl-body{padding:16px 20px 20px}}
+.lvl summary{font-weight:400}
+.lvl[open]{grid-column:1/-1;order:-1}
+@media (min-width:901px){
+  .lvl[open] summary{display:grid;grid-template-columns:auto 1fr;column-gap:20px;row-gap:8px;align-items:center}
+  .lvl[open] summary .svc-ico{grid-row:1/3}
+  .lvl[open] summary p,.lvl[open] summary .lvl-more{grid-column:2}
+  .lvl[open] .lvl-body{display:block;column-count:2;column-gap:48px}
+  .lvl[open] .lvl-body>*{break-inside:avoid;margin-bottom:12px}
+  .lvl[open] .lvl-body h4{break-after:avoid}
+}
+.lvl[open] summary .chip,.lvl[open] summary .lvl-more,.lvl[open] summary h3{justify-self:start;grid-column:2}
+html{scroll-padding-top:90px}
