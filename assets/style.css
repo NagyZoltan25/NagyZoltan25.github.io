@@ -662,3 +662,27 @@ html{scroll-padding-top:90px}
 .apply-tab.on b{color:var(--accent)}
 [data-theme="dark"] .apply-tab.on b{color:var(--accent-light)}
 @media (max-width:640px){.apply-tabs{grid-template-columns:1fr}.apply-tab b{font-size:16px}}
+
+/* ===== Karrier jelentkezés v2 (önéletrajz-alapú) ===== */
+.apply-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:as}
+.apply-steps li{counter-increment:as;display:flex;flex-direction:column;gap:2px;padding:16px 16px 16px 56px;position:relative;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.apply-steps li::before{content:counter(as);position:absolute;left:14px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
+.apply-steps span{font-size:13.5px;color:var(--muted)}
+.apply-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start}
+.apply-main{position:relative;padding:28px;border-radius:20px;background:var(--surface);border:2px solid var(--accent);box-shadow:0 16px 40px rgba(30,122,82,.14);display:flex;flex-direction:column;gap:18px}
+.apply-badge{position:absolute;top:-13px;left:28px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+.apply-head{display:flex;gap:14px;align-items:flex-start}
+.apply-head .cc-ico,.apply-alt .cc-ico{flex:none;margin:0}
+.apply-head h3{margin:0 0 4px}
+.apply-main .tally-box{display:flex;flex-direction:column;gap:10px}
+.apply-side{display:flex;flex-direction:column;gap:12px}
+.apply-alt{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.apply-alt:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
+.apply-alt b{display:block;margin-bottom:2px}
+.apply-alt span{font-size:14.5px;color:var(--muted)}
+.apply-alt u{color:var(--accent);text-decoration:none;font-weight:700}
+.apply-alt.pro{background:var(--navy);border-color:var(--navy)}
+.apply-alt.pro b{color:#fff}.apply-alt.pro span{color:#C9D2DE}.apply-alt.pro u{color:var(--accent-light)}
+[data-theme="dark"] .apply-alt u{color:var(--accent-light)}
+@media (max-width:900px){.apply-grid{grid-template-columns:1fr}.apply-steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.apply-steps{grid-template-columns:1fr}.apply-main{padding:22px}}
