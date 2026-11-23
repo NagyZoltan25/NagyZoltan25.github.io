@@ -647,3 +647,18 @@ html{scroll-padding-top:90px}
 [data-theme="dark"] .uni-list b{color:var(--accent-light)}
 .uni-list span{font-size:14px;color:var(--ink);line-height:1.3}
 @media (max-width:640px){.uni-list{grid-template-columns:1fr}}
+
+/* ===== Karrier jelentkezés: két út ===== */
+.section.apply{background:linear-gradient(180deg,var(--accent-soft) 0%,var(--bg) 60%)}
+.apply-trust{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.apply-trust li{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.apply-trust li::before{content:"✓";color:var(--accent);font-weight:800}
+.apply-tabs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.apply-tab{display:flex;flex-direction:column;gap:4px;text-align:left;padding:18px 20px;border-radius:16px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.apply-tab b{font-family:Manrope,sans-serif;font-size:18px}
+.apply-tab span{font-size:14px;color:var(--muted)}
+.apply-tab:hover{border-color:var(--accent-light)}
+.apply-tab.on{border-color:var(--accent);box-shadow:0 10px 28px rgba(30,122,82,.15)}
+.apply-tab.on b{color:var(--accent)}
+[data-theme="dark"] .apply-tab.on b{color:var(--accent-light)}
+@media (max-width:640px){.apply-tabs{grid-template-columns:1fr}.apply-tab b{font-size:16px}}

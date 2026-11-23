@@ -179,3 +179,11 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
     setTimeout(function(){d.scrollIntoView({behavior:'smooth',block:'start'});},60);
   });});
 })();
+
+/* Karrier: jelentkezési fülek (hívás / űrlap) */
+(function(){
+  var tabs=document.querySelectorAll('.apply-tab'); if(!tabs.length) return;
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(o){var on=o===t;o.classList.toggle('on',on);o.setAttribute('aria-selected',on);document.getElementById(o.dataset.pane).hidden=!on;});
+  });});
+})();
