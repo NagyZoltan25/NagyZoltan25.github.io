@@ -686,3 +686,6 @@ html{scroll-padding-top:90px}
 [data-theme="dark"] .apply-alt u{color:var(--accent-light)}
 @media (max-width:900px){.apply-grid{grid-template-columns:1fr}.apply-steps{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.apply-steps{grid-template-columns:1fr}.apply-main{padding:22px}}
+.why.why-hl{background:linear-gradient(160deg,#17603F 0%,#1E7A52 100%);border-color:transparent}
+.why.why-hl h3::before{background:#fff}
+.why.why-hl p{color:#E3F3EA}
