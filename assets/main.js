@@ -125,27 +125,43 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
   });
 });
 
-/* Élő számlálók (data/stats.json) */
+/* Élő számlálók + pörgő számok: akkor indulnak, amikor a látogató odagörget */
 (function(){
-  var els=document.querySelectorAll('[data-stat]'); if(!els.length) return;
-  var fmt=function(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');};
-  function animate(el,to){
-    el.dataset.done='1';
-    if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=fmt(to);return;}
-    var dur=1800,t0=null;
-    function step(t){t0=t0||t;var p=Math.min((t-t0)/dur,1);el.textContent=fmt(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
-    requestAnimationFrame(step);
-    setTimeout(function(){el.textContent=fmt(to);},dur+300);
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);run(e.target);}});},{threshold:.6}):null;
+  function parse(txt){
+    var m=txt.match(/^(\D*?)(\d[\d\s ]*(?:,\d+)?)(.*)$/); if(!m) return null;
+    var raw=m[2].replace(/[\s ]/g,''), dec=(raw.split(',')[1]||'').length;
+    return {pre:m[1],val:parseFloat(raw.replace(',','.')),dec:dec,post:m[3],sep:/\d[\s ]\d/.test(m[2])||parseFloat(raw)>=10000};
   }
-  function apply(st){
-    var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);animate(e.target,+e.target.dataset.to);}});},{threshold:.4}):null;
+  function fmt(n,p){var s=n.toFixed(p.dec).replace('.',',');var parts=s.split(',');if(p.sep)parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,' ');return p.pre+parts.join(',')+p.post;}
+  function run(el){
+    var p=el._p; if(!p) return;
+    if(reduce){el.textContent=fmt(p.val,p);return;}
+    var dur=p.val>=1000?2000:1400,t0=null;
+    function step(t){t0=t0||t;var k=Math.min((t-t0)/dur,1);el.textContent=fmt(p.val*(1-Math.pow(1-k,3)),p);if(k<1)requestAnimationFrame(step);else el.textContent=fmt(p.val,p);}
+    requestAnimationFrame(step);
+  }
+  function arm(el){
+    var p=parse(el.textContent.trim()); if(!p||!p.val) return;
+    el._p=p;
+    if(!io){return;}
+    var r=el.getBoundingClientRect();
+    if(r.top<innerHeight && r.bottom>0 && document.readyState==='complete' && scrollY>0){return;} /* már látszik görgetés közben: hagyjuk */
+    el.textContent=fmt(0,p); io.observe(el);
+  }
+  /* 1) automatikusan pörgő nagy számok */
+  var sel='.stat strong:not([data-nospin]):not(:has([data-stat])),.tax-pct,.bignum';
+  try{document.querySelectorAll(sel).forEach(arm);}catch(e){document.querySelectorAll('.tax-pct,.bignum').forEach(arm);}
+  /* 2) óraszám és diákszám a data/stats.json-ból – mindig az aktuális állás */
+  var els=document.querySelectorAll('[data-stat]'); if(!els.length) return;
+  fetch('data/stats.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(st){
     els.forEach(function(el){
       var v=st[el.dataset.stat]; if(typeof v!=='number') return;
-      if(el.hasAttribute('data-count')&&io){el.dataset.to=v;el.textContent='0';io.observe(el);setTimeout(function(){if(!el.dataset.done){io.unobserve(el);el.textContent=fmt(v);}},3000);}
-      else el.textContent=fmt(v);
+      var txt=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+      if(el.hasAttribute('data-count')){el.textContent=txt;arm(el);} else el.textContent=txt;
     });
-  }
-  fetch('data/stats.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(apply).catch(function(){});
+  }).catch(function(){document.querySelectorAll('[data-stat][data-count]').forEach(arm);});
 })();
 
 /* Karrier: lebegő jelentkezés-gomb */
