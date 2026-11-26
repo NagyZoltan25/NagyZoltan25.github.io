@@ -187,3 +187,89 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
     tabs.forEach(function(o){var on=o===t;o.classList.toggle('on',on);o.setAttribute('aria-selected',on);document.getElementById(o.dataset.pane).hidden=!on;});
   });});
 })();
+
+/* ===== Telefonos nézet: összecsukás, gyorsmenü, alsó gombsáv ===== */
+(function(){
+  var mq=window.matchMedia('(max-width: 640px)');
+  var root=document.documentElement;
+  var touch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+  root.classList.toggle('is-touch',touch);
+  if(!mq.matches) return;
+  root.classList.add('is-phone');
+  var page=(location.pathname.split('/').pop()||'index.html').replace('.html','')||'index';
+
+  /* 1) Hosszú listák összecsukása: az első N elem látszik */
+  var folds=[['.charts',2],['.state-row',1],['.why-grid',3],['.lgroups',1],['.gcol2 ul',3],['.cmp tbody',3],['.cv-grid',1]];
+  folds.forEach(function(f){
+    document.querySelectorAll(f[0]).forEach(function(box){
+      var kids=Array.prototype.filter.call(box.children,function(c){return c.tagName!=='SCRIPT';});
+      var n=f[1]; if(kids.length<=n+0) return;
+      var hidden=kids.slice(n); hidden.forEach(function(k){k.classList.add('m-hide');});
+      var b=document.createElement('button'); b.type='button'; b.className='m-more';
+      b.innerHTML='Továbbiak megjelenítése <span>('+hidden.length+')</span>';
+      b.addEventListener('click',function(){hidden.forEach(function(k){k.classList.remove('m-hide');}); b.remove();});
+      var anchor=box.tagName==='TBODY'?box.closest('.cmp-wrap')||box.closest('table'):box;
+      anchor.insertAdjacentElement('afterend',b);
+    });
+  });
+
+  /* 2) Gyorsmenü a hosszú oldalakon */
+  var navs={
+    karrier:[['kinek','Kinek szól'],['diakoknak','Egyetemistáknak'],['mellekallas','Mellékállás'],['szakmabelieknek','Szakmabelieknek'],['karrierut','Karrierút'],['gyik','GYIK'],['jelentkezes','Jelentkezés']],
+    tanacsadas:[['celok','Célok'],['teruletek','Területek'],['tamogatasok','Állami támogatás'],['folyamat','Folyamat'],['foglalas','Foglalás'],['gyik','GYIK']],
+    korrepetalas:[['foglalas','Foglalás'],['csoportok','Barátokkal']],
+    rolam:[['kapcsolat','Kapcsolat']]
+  };
+  var items=(navs[page]||[]).filter(function(x){return document.getElementById(x[0]);});
+  if(items.length>=3){
+    var nav=document.createElement('nav'); nav.className='m-quick'; nav.setAttribute('aria-label','Ugrás az oldalon');
+    nav.innerHTML=items.map(function(x){return '<a href="#'+x[0]+'">'+x[1]+'</a>';}).join('');
+    var hero=document.querySelector('main section'); if(hero) hero.insertAdjacentElement('afterend',nav);
+    var links=nav.querySelectorAll('a');
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){var on=l.getAttribute('href')==='#'+e.target.id;l.classList.toggle('on',on);if(on)l.scrollIntoView({block:'nearest',inline:'center'});});}});},{rootMargin:'-45% 0px -50% 0px'});
+      items.forEach(function(x){io.observe(document.getElementById(x[0]));});
+    }
+  }
+
+  /* 3) Alsó cselekvési sáv */
+  var tel=['tel:+36301966102','Hívás'];
+  var bars={
+    index:[['korrepetalas.html#foglalas','Órát foglalok'],['tanacsadas.html#foglalas','Tanácsadás']],
+    korrepetalas:[['#foglalas','Órát foglalok'],tel],
+    tanacsadas:[['#foglalas','Díjmentes időpont'],tel],
+    karrier:[['#jelentkezes','Jelentkezem'],tel],
+    rolam:[['#kapcsolat','Kapcsolat'],tel]
+  };
+  var cfg=bars[page]||[['rolam.html#kapcsolat','Kapcsolat'],tel];
+  var bar=document.createElement('div'); bar.className='m-bar';
+  bar.innerHTML=cfg.map(function(c,i){
+    var ic=c[0].indexOf('tel:')===0?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>':'';
+    return '<a class="'+(i===0?'mb-main':'mb-alt')+'" href="'+c[0]+'" data-umami-event="mobil-sav-'+page+'-'+(i+1)+'">'+ic+c[1]+'</a>';
+  }).join('');
+  document.body.appendChild(bar); document.body.classList.add('has-mbar');
+  var target=document.querySelector(cfg[0][0].indexOf('#')===0?cfg[0][0]:'#__none');
+  function upd(){
+    var hide=window.scrollY<260;
+    if(target){var r=target.getBoundingClientRect(); if(r.top<window.innerHeight*0.6 && r.bottom>120) hide=true;}
+    bar.classList.toggle('off',hide);
+  }
+  window.addEventListener('scroll',upd,{passive:true}); upd();
+})();
+
+/* Telefonon: másodlagos szekciók összecsukva, a cím látszik */
+(function(){
+  if(!window.matchMedia('(max-width: 640px)').matches) return;
+  document.querySelectorAll('section[data-m-fold]').forEach(function(sec){
+    var wrap=sec.querySelector('.wrap'); if(!wrap) return;
+    var head=wrap.querySelector('.sec-head')||wrap.firstElementChild;
+    var rest=Array.prototype.filter.call(wrap.children,function(c){return c!==head && !c.contains(head);});
+    if(!rest.length) return;
+    rest.forEach(function(c){c.classList.add('m-hide');});
+    sec.classList.add('m-folded');
+    var b=document.createElement('button'); b.type='button'; b.className='m-more m-open';
+    b.textContent='Kibontom ↓';
+    b.addEventListener('click',function(){rest.forEach(function(c){c.classList.remove('m-hide');}); sec.classList.remove('m-folded'); b.remove();});
+    head.insertAdjacentElement('afterend',b);
+  });
+})();
