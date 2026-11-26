@@ -130,7 +130,7 @@ document.querySelectorAll('.tally-box').forEach(function (box) {
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);run(e.target);}});},{threshold:.6}):null;
   function parse(txt){
-    var m=txt.match(/^(\D*?)(\d[\d\s ]*(?:,\d+)?)(.*)$/); if(!m) return null;
+    var m=txt.match(/^(\D*?)(\d+(?:[\s ]\d{3})*(?:,\d+)?)(.*)$/); if(!m) return null;
     var raw=m[2].replace(/[\s ]/g,''), dec=(raw.split(',')[1]||'').length;
     return {pre:m[1],val:parseFloat(raw.replace(',','.')),dec:dec,post:m[3],sep:/\d[\s ]\d/.test(m[2])||parseFloat(raw)>=10000};
   }
